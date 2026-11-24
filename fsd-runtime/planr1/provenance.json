@@ -1,0 +1,25 @@
+{
+  "upstream": "https://github.com/XiaolongTang23/Plan-R1",
+  "commit": "23bc54433599002f275c18b88cf261ab5e87d775",
+  "changes": [
+    "nn.Module base; removed training-only methods, rewards, metrics, plotting imports",
+    "safe token loading; optional navigation-based ranking of official top-96 ego tokens"
+  ],
+  "files": {
+    "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "inference.py": "a9c346511f666ef7e632fff171753f04bf8d821b24a2b7b2a86cc522806fb642",
+    "layers/__init__.py": "4c5474880ca635006e863e5da98b78c346b57e6ab8a9f58ff4a89ab27dfdd174",
+    "layers/graph_attention.py": "bd152fcc0d90a904c0bbb2f6bff0645376dc9ef8e5f99e7e9e0a905eb663fc76",
+    "layers/two_layer_mlp.py": "090f3c178509f49579a5a968726a779eb4bfe089596fc19136495e661727247d",
+    "modules/__init__.py": "bbf456ed3db8710637428fe06a1397712a62f0382e61fed220721d0826eca470",
+    "modules/backbone.py": "70f8a6cff26a136ec17893fdb623015f1ca14ebb7fcd2ef071399c5dbdbbe3c4",
+    "modules/map_encoder.py": "5742c988fa43d3825a85781b18fdee9017d0e6f2f575252922d0122da1b04908",
+    "tokens/tokens_1024.pt": "72ad21c4c7530c48c6a7fd47355487e1b65b217ceda2db3bb0ee133466934213",
+    "transforms/__init__.py": "d7863829c95dda820cefaba9200e4a06ca72dab485fb341fabaf349e9ed3823e",
+    "transforms/token_builder.py": "81989b7c46351ea8d5ad23030d3b3a75b6dabc4db6ee38b5bd45c85e194570a6",
+    "utils/__init__.py": "6e45022e035e092eafc1593fad70e078966e1b1b58e76b9b76ad1d90d6ee95b6",
+    "utils/config.py": "5f52d2326077be0b278e3b7dabfad52fd76dfe5d7caba5fb35259fbbbe5543cd",
+    "utils/init_weights.py": "b65a1ef2fa068c41457379de6c9e9f19d7c01908f4f624288577b34aa2fc8aef",
+    "utils/process_data.py": "f3239d85d9e4158d3bdd920378a46ba9ab1111d66e6cdbe814076058836970b5"
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "sourceRoot": "external/DriveScene-Studio-public-fork",
+  "sourceRepository": "https://github.com/prajeeshmp86/DriveScene-Studio",
+  "sourceCommit": "ba307215f5ce67289a9cacea8ae6fb54870d5307",
+  "sourceCommitGithubAuthor": "Paxton0209",
+  "githubCurrentlyLabelsRepositoryFork": false,
+  "officialNoticePreservedSnapshot": "8caea0da993683445a14a1db3bbedb5b44cad1fd",
+  "officialSnapshotAvailableFromMirror": true,
+  "mirrorCompare": {
+    "status": "ahead",
+    "ahead_by": 142,
+    "behind_by": 0,
+    "total_commits": 142
+  },
+  "oldCommitIsAncestorOfOfficialNoticeSnapshot": true,
+  "licenseAndAssetLicenseIdenticalAtBothCommits": true,
+  "files": [
+    {
+      "file": "LICENSE",
+      "bytes": 1063,
+      "sha256": "323926722c716c53cef5519db32e02419733a715ef991d4929743c467fdc4f45",
+      "gitBlobSha1": "9f30ccbbb000a8e444d9cfe98537ae6d50d275fe",
+      "pinnedSource": "https://raw.githubusercontent.com/prajeeshmp86/DriveScene-Studio/ba307215f5ce67289a9cacea8ae6fb54870d5307/LICENSE"
+    },
+    {
+      "file": "ASSET-LICENSE.md",
+      "bytes": 1339,
+      "sha256": "d1fecf1358d52722084b5c1d81efddf57a591a9e562c7af69e0e09d02d0cade1",
+      "gitBlobSha1": "e4c13de157ae94cf23236c45a1f0c5de5c2a17ee",
+      "pinnedSource": "https://raw.githubusercontent.com/prajeeshmp86/DriveScene-Studio/ba307215f5ce67289a9cacea8ae6fb54870d5307/ASSET-LICENSE.md"
+    },
+    {
+      "file": "CREDITS.md",
+      "bytes": 1922,
+      "sha256": "970739efa25d60ea327a30a6a407d2c586e247c1ef54a71326cefd2498b354ba",
+      "gitBlobSha1": "74a60f8fe8c69928e61d67493901e91900d3522f",
+      "pinnedSource": "https://raw.githubusercontent.com/prajeeshmp86/DriveScene-Studio/ba307215f5ce67289a9cacea8ae6fb54870d5307/CREDITS.md"
+    },
+    {
+      "file": "THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "gitBlobSha1": "cf781430404b0ae0ba7d8dea3457a3515dd7c9b9",
+      "pinnedSource": "https://raw.githubusercontent.com/prajeeshmp86/DriveScene-Studio/ba307215f5ce67289a9cacea8ae6fb54870d5307/THREE-LICENSE.txt"
+    },
+    {
+      "file": "MESHOPT-LICENSE.txt",
+      "bytes": 1079,
+      "sha256": "e4a26033e3551fb2722888949fbb41e77aee628e8e8f04dcffeee301aa7e5634",
+      "gitBlobSha1": "a5c3b1ccca7bbe958d17644bde2ec1fc6f14c19d",
+      "pinnedSource": "https://raw.githubusercontent.com/prajeeshmp86/DriveScene-Studio/ba307215f5ce67289a9cacea8ae6fb54870d5307/MESHOPT-LICENSE.txt"
+    },
+    {
+      "file": "README.md",
+      "bytes": 7934,
+      "sha256": "b592d2005890fe2e8411f9d9ad252f148589a9c935c025017bd16412eb663597",
+      "gitBlobSha1": "9ddf4bbc0bf3034196bd7cd1e8fea05d576875fd",
+      "pinnedSource": "https://raw.githubusercontent.com/prajeeshmp86/DriveScene-Studio/ba307215f5ce67289a9cacea8ae6fb54870d5307/README.md"
+    },
+    {
+      "file": "world.js",
+      "bytes": 102930,
+      "sha256": "a92c7a18bdf3d188316562a4a60e4257a6eb1f21363e5bbcc7c978f10b7b4a06",
+      "gitBlobSha1": "a355f0e23842f07b3a764ee6e7c8728bb2a933a5",
+      "pinnedSource": "https://raw.githubusercontent.com/prajeeshmp86/DriveScene-Studio/ba307215f5ce67289a9cacea8ae6fb54870d5307/world.js"
+    },
+    {
+      "file": "studio-environment.js",
+      "bytes": 939,
+      "sha256": "a136d8e2e0617d030b4dcff4b1e77abd92cf98cbc209d31d22cabe17f8d13146",
+      "gitBlobSha1": "20f25c13a2503c37018ec28ede8cb9e89ea4812a",
+      "pinnedSource": "https://raw.githubusercontent.com/prajeeshmp86/DriveScene-Studio/ba307215f5ce67289a9cacea8ae6fb54870d5307/studio-environment.js"
+    },
+    {
+      "file": "assets/studio-environment.bin.gz",
+      "bytes": 260078,
+      "sha256": "c3364959c271fe664a07741be3128528b06924421f0f8ce01f5d64d0a5d70153",
+      "gitBlobSha1": "339e78adf04881515d9af874e5a79c528a258ef2",
+      "pinnedSource": "https://raw.githubusercontent.com/prajeeshmp86/DriveScene-Studio/ba307215f5ce67289a9cacea8ae6fb54870d5307/assets/studio-environment.bin.gz"
+    },
+    {
+      "file": "vehicle.js",
+      "bytes": 10587,
+      "sha256": "3ce53bb50908d2c40504fe37550899190e744cbe076675672e29deded79094d8",
+      "gitBlobSha1": "664924b132da12a5bb6fed9b8e940616d48dc175",
+      "pinnedSource": "https://raw.githubusercontent.com/prajeeshmp86/DriveScene-Studio/ba307215f5ce67289a9cacea8ae6fb54870d5307/vehicle.js"
+    },
+    {
+      "file": "contact-shadows.js",
+      "bytes": 1145,
+      "sha256": "82fb672ad954111b2873b9bb3cfc895a86d5fda74d6a919bdfebc726735edf8d",
+      "gitBlobSha1": "21b3a49da481aa552caa2183bdae8dc79ae51eff",
+      "pinnedSource": "https://raw.githubusercontent.com/prajeeshmp86/DriveScene-Studio/ba307215f5ce67289a9cacea8ae6fb54870d5307/contact-shadows.js"
+    },
+    {
+      "file": "ground-reflection.js",
+      "bytes": 5472,
+      "sha256": "000fa059dde233572be301305d84a07803594657a9e2c00dcd9b6b7a04e002be",
+      "gitBlobSha1": "96006d78856a4dccf98b1dc82712eeca6fa184ef",
+      "pinnedSource": "https://raw.githubusercontent.com/prajeeshmp86/DriveScene-Studio/ba307215f5ce67289a9cacea8ae6fb54870d5307/ground-reflection.js"
+    },
+    {
+      "file": "tail-light.js",
+      "bytes": 2509,
+      "sha256": "2538f9ac03867fbb01ea94670baeb3f85d39524c5a941fbd5827f6026ac37ed0",
+      "gitBlobSha1": "e59980181e2b6f9a541f50c7fe932e904dce25c6",
+      "pinnedSource": "https://raw.githubusercontent.com/prajeeshmp86/DriveScene-Studio/ba307215f5ce67289a9cacea8ae6fb54870d5307/tail-light.js"
+    },
+    {
+      "file": "RoundedBoxGeometry.js",
+      "bytes": 6476,
+      "sha256": "c1b7c9bd2cddff2e3f3a0723f618a3d364a47450e3d25771d21faed88410bec8",
+      "gitBlobSha1": "25cbf6154fc1f92f25ba26233ce1ba3efe42b3ba",
+      "pinnedSource": "https://raw.githubusercontent.com/prajeeshmp86/DriveScene-Studio/ba307215f5ce67289a9cacea8ae6fb54870d5307/RoundedBoxGeometry.js"
+    },
+    {
+      "file": "outdoor-parking.js",
+      "bytes": 4501,
+      "sha256": "1a9fbc091e94dc993caaebf4d5b7fadf652ed0642e306723c27196fc46d56a73",
+      "gitBlobSha1": "50dda74fd77d909f4ab65d7e19ad331926fd9c04",
+      "pinnedSource": "https://raw.githubusercontent.com/prajeeshmp86/DriveScene-Studio/ba307215f5ce67289a9cacea8ae6fb54870d5307/outdoor-parking.js"
+    },
+    {
+      "file": "parking-reference.js",
+      "bytes": 4042,
+      "sha256": "0e1a123bebb9474e50164bcc44ef367cb596ab62bc8f3d2af9b878a4ca778ccc",
+      "gitBlobSha1": "d810b4ab5b5406d2aae9bc27e1247b3ee50b289e",
+      "pinnedSource": "https://raw.githubusercontent.com/prajeeshmp86/DriveScene-Studio/ba307215f5ce67289a9cacea8ae6fb54870d5307/parking-reference.js"
+    },
+    {
+      "file": "ego-vehicle-startup.glb.gz",
+      "bytes": 913324,
+      "sha256": "9592e45f0412e4626bf12e8a50d34ec46f2945d68b572b98285c0117ad8590ab",
+      "gitBlobSha1": "661a9a6b53e7657fa3c0bf7549496effd8becfc5",
+      "pinnedSource": "https://raw.githubusercontent.com/prajeeshmp86/DriveScene-Studio/ba307215f5ce67289a9cacea8ae6fb54870d5307/ego-vehicle-startup.glb.gz"
+    },
+    {
+      "file": "ego-vehicle-ready.glb.gz",
+      "bytes": 4638382,
+      "sha256": "2651f46a64bd41c24cd482b73d4f31d14b26cb5b703e33eaf95a9199d813df99",
+      "gitBlobSha1": "4f4de9b7aebd484094f01c1c787fdf98adf60460",
+      "pinnedSource": "https://raw.githubusercontent.com/prajeeshmp86/DriveScene-Studio/ba307215f5ce67289a9cacea8ae6fb54870d5307/ego-vehicle-ready.glb.gz"
+    },
+    {
+      "file": "ego-suv.meshopt.glb.gz",
+      "bytes": 14843951,
+      "sha256": "a521fda734859c9e94b0f4c37c8fa19f634c6f64caf038bc7b5c5c3dc9b6a0be",
+      "gitBlobSha1": "53fdafad0ba8216cf9a2aa4ecc62a85ba72cf2b1",
+      "pinnedSource": "https://raw.githubusercontent.com/prajeeshmp86/DriveScene-Studio/ba307215f5ce67289a9cacea8ae6fb54870d5307/ego-suv.meshopt.glb.gz"
+    },
+    {
+      "file": "ego-suv.glb.gz",
+      "bytes": 16344862,
+      "sha256": "bf78e6103e27ce922d1b358a6c390a6afb1e8bf92189cce5b84eb1a68b7a3008",
+      "gitBlobSha1": "f69d104d84be693c4a77e0ab8281029c52ba1897",
+      "pinnedSource": "https://raw.githubusercontent.com/prajeeshmp86/DriveScene-Studio/ba307215f5ce67289a9cacea8ae6fb54870d5307/ego-suv.glb.gz"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "file": "roadster-print-1_24.3mf",
+  "sourceSha256": "690c25b8795680fa39a9b9ebaab5aefcb2529a99c14fd2990aacc20e18ffcdd2",
+  "scale": "1:24 using temporary 4.600m vehicle length (not official)",
+  "dimensionsMillimeters": [
+    191.66666269302368,
+    83.09408525625864,
+    50.69665823793911
+  ],
+  "vertices": 282985,
+  "triangles": 566006,
+  "connectedComponents": 1,
+  "boundaryEdges": 0,
+  "nonManifoldEdges": 0,
+  "degenerateTriangles": 0,
+  "volumeCubicMillimeters": 458240.53813679545,
+  "axleRadiusMillimeters": 1.8,
+  "wheelFunction": "static; original wheels joined to body by concealed axles",
+  "texture": "monochrome geometric print; emissive PNG is not a printable material",
+  "supportsRequired": true,
+  "thinFeaturesNotThickened": true,
+  "zipCRCValid": true,
+  "inputMeshes": {
+    "Body": {
+      "triangles": 309492,
+      "closed": true
+    },
+    "Wheel_FL": {
+      "triangles": 62668,
+      "closed": true
+    },
+    "Wheel_FR": {
+      "triangles": 65498,
+      "closed": true
+    },
+    "Wheel_RL": {
+      "triangles": 62668,
+      "closed": true
+    },
+    "Wheel_RR": {
+      "triangles": 65498,
+      "closed": true
+    }
+  },
+  "lib3mf": {
+    "version": "2.5.0",
+    "warnings": 0,
+    "meshes": [
+      {
+        "vertices": 282985,
+        "triangles": 566006,
+        "valid": true,
+        "manifoldAndOriented": true
+      }
+    ]
+  },
+  "bambuStudio": {
+    "version": "02.08.02.61",
+    "infoExitCode": 0,
+    "manifold": true,
+    "parts": 1,
+    "dimensionsMillimeters": [
+      191.666656,
+      83.094086,
+      50.696659
+    ],
+    "supportedSlicing": {
+      "returnCode": 0,
+      "warning": "",
+      "layerHeightMillimeters": 0.1599999964237213,
+      "infillPercent": 15.0,
+      "wallLoops": 3,
+      "machine": "Bambu Lab A1 0.4 nozzle",
+      "filament": "Generic PLA",
+      "support": "tree(auto)",
+      "predictedSeconds": 37144.89453125,
+      "predictedGrams": 188.56338500976562,
+      "physicalPrintPerformed": false,
+      "recoveredInternalLogMessage": "Detected missing Voronoi vertex even after the rotation of input."
+    }
+  }
+}

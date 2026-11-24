@@ -1,0 +1,12 @@
+--- inference.py
++++ inference.py
+@@ -50 +50 @@
+-    def plan_inference(self, data: Batch):
++    def plan_inference(self, data: Batch, goals=None):
+@@ -56 +56 @@
+-        for _ in range(self.num_future_intervals):
++        for step in range(self.num_future_intervals):
+@@ -62,0 +63,3 @@
++            if goals is not None:
++                from guided_decode import choose
++                ego_action_step = choose(plan_logits_step, data, self.token_dict, ego_index, goals[step])

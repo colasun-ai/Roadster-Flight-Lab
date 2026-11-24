@@ -1,0 +1,554 @@
+{
+  "version": 1,
+  "vehicleId": "model3-2018-performance",
+  "units": "meters",
+  "axes": {
+    "up": "+Y",
+    "forward": "+Z",
+    "left": "+X",
+    "rollingAxis": "+X for all wheels",
+    "positiveRolling": "forward +Z",
+    "positiveSteering": "left +X"
+  },
+  "source": {
+    "path": "assets/originals/tesla_2018_model_3.glb",
+    "sha256": "d6d78c9bd1bd9c7ca87a07509a2e7b6585995fcbdec054f297167ba7c15cd878",
+    "bytes": 22671680,
+    "vertices": 394055,
+    "triangles": 684315,
+    "nodes": 301,
+    "meshes": 176,
+    "materials": 58,
+    "images": 22,
+    "asset": {
+      "extras": {
+        "author": "Ameer Studio (https://sketchfab.com/uchiha.321abc)",
+        "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+        "source": "https://sketchfab.com/3d-models/tesla-2018-model-3-5ef9b845aaf44203b6d04e2c677e444f",
+        "title": "Tesla 2018 Model 3"
+      },
+      "generator": "Sketchfab-12.68.0",
+      "version": "2.0"
+    }
+  },
+  "scale": 0.008926602245979203,
+  "sourceWorldOrigin": [
+    0.026101619005203247,
+    -75.15860547631961,
+    -15.480260514041603
+  ],
+  "rootOrigin": "ground level, midpoint of the two axles in XZ",
+  "dimensions": {
+    "length": 4.694,
+    "widthWithMirrors": 2.1858259623741025,
+    "height": 1.408656674960032,
+    "bodyWidth": 1.9488736555466715,
+    "historicalReference": {
+      "length": 4.694,
+      "width": 1.849,
+      "widthWithMirrors": 2.088,
+      "height": 1.443,
+      "wheelbase": 2.875,
+      "frontTrack": 1.58,
+      "rearTrack": 1.58
+    }
+  },
+  "wheels": [
+    {
+      "id": "FL",
+      "center": [
+        0.8313459525888218,
+        0.3332962358758888,
+        1.4300477697476413
+      ],
+      "radius": 0.3332962358758888,
+      "width": 0.24782987119841068,
+      "triangles": 26486,
+      "sourceWheelNodes": [
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292
+      ],
+      "placementCorrectionMeters": [
+        0.0,
+        -0.0058049346772493515,
+        0.0
+      ],
+      "suspensionNode": "Wheel_FL_Suspension",
+      "steeringNode": "Wheel_FL_Steering",
+      "rotationNode": "Wheel_FL_Rotation",
+      "meshGroup": "Wheel_FL",
+      "caliperNodes": [
+        "Caliper_FL_12",
+        "Caliper_FL_13"
+      ]
+    },
+    {
+      "id": "FR",
+      "center": [
+        -0.8308799683488246,
+        0.3332962358758888,
+        1.4300477697476413
+      ],
+      "radius": 0.3332962358758888,
+      "width": 0.2478298978017585,
+      "triangles": 26486,
+      "sourceWheelNodes": [
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292
+      ],
+      "placementCorrectionMeters": [
+        0.0,
+        -0.0058049346772493515,
+        0.0
+      ],
+      "suspensionNode": "Wheel_FR_Suspension",
+      "steeringNode": "Wheel_FR_Steering",
+      "rotationNode": "Wheel_FR_Rotation",
+      "meshGroup": "Wheel_FR",
+      "caliperNodes": [
+        "Caliper_FR_9",
+        "Caliper_FR_10"
+      ]
+    },
+    {
+      "id": "RL",
+      "center": [
+        0.8314436303824707,
+        0.339319290355118,
+        -1.4300477155794382
+      ],
+      "radius": 0.339319290355118,
+      "width": 0.25230844807728137,
+      "triangles": 26486,
+      "sourceWheelNodes": [
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300
+      ],
+      "placementCorrectionMeters": [
+        0.0,
+        0.0002170608235393945,
+        0.0
+      ],
+      "suspensionNode": "Wheel_RL_Suspension",
+      "steeringNode": null,
+      "rotationNode": "Wheel_RL_Rotation",
+      "meshGroup": "Wheel_RL",
+      "caliperNodes": [
+        "Caliper_RL_7"
+      ]
+    },
+    {
+      "id": "RR",
+      "center": [
+        -0.8309775606376332,
+        0.339319290355118,
+        -1.4300478239158443
+      ],
+      "radius": 0.339319290355118,
+      "width": 0.2523084751613829,
+      "triangles": 26486,
+      "sourceWheelNodes": [
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300
+      ],
+      "placementCorrectionMeters": [
+        0.0,
+        0.00021706082352174194,
+        0.0
+      ],
+      "suspensionNode": "Wheel_RR_Suspension",
+      "steeringNode": null,
+      "rotationNode": "Wheel_RR_Rotation",
+      "meshGroup": "Wheel_RR",
+      "caliperNodes": [
+        "Caliper_RR_5"
+      ]
+    }
+  ],
+  "wheelbase": 2.8600955394952825,
+  "frontTrack": 1.6622259209376464,
+  "rearTrack": 1.6624211910201039,
+  "cockpit": {
+    "position": [
+      0.415,
+      1.05,
+      -0.18
+    ],
+    "target": [
+      0.1,
+      0.92,
+      2.0
+    ],
+    "fov": 68,
+    "status": "engineering eye point in original left-hand-drive cabin; verified steering wheel and center screen visible"
+  },
+  "interactions": {
+    "door_fl": {
+      "node": "Door_FL_Hinge",
+      "pivot": [
+        0.8982337922321353,
+        0.6150470939205002,
+        0.9109429542472556
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "maxAngleDegrees": -65,
+      "sourcePivotNode": 184,
+      "sourcePivotName": "door_lf_dummy",
+      "status": "original source hinge retained; engineering motion limits"
+    },
+    "door_fr": {
+      "node": "Door_FR_Hinge",
+      "pivot": [
+        -0.8975938087958775,
+        0.6150470939205002,
+        0.9109429542472556
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "maxAngleDegrees": 65,
+      "sourcePivotNode": 218,
+      "sourcePivotName": "door_rf_dummy",
+      "status": "original source hinge retained; engineering motion limits"
+    },
+    "door_rl": {
+      "node": "Door_RL_Hinge",
+      "pivot": [
+        0.9226125680855618,
+        0.6150454149478639,
+        -0.2547319456343184
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "maxAngleDegrees": -65,
+      "sourcePivotNode": 202,
+      "sourcePivotName": "door_lr_dummy",
+      "status": "original source hinge retained; engineering motion limits"
+    },
+    "door_rr": {
+      "node": "Door_RR_Hinge",
+      "pivot": [
+        -0.9219677960467006,
+        0.6150454149478292,
+        -0.254731732807536
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "maxAngleDegrees": 65,
+      "sourcePivotNode": 235,
+      "sourcePivotName": "door_rr_dummy",
+      "status": "original source hinge retained; engineering motion limits"
+    },
+    "hood": {
+      "node": "Hood_Hinge",
+      "pivot": [
+        0.00023299877083554074,
+        0.8828202026753522,
+        1.0458335702591017
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "maxAngleDegrees": -55,
+      "sourcePivotNode": 279,
+      "sourcePivotName": "bonnet_dummy",
+      "status": "original source hinge retained; engineering motion limits"
+    },
+    "trunk": {
+      "node": "Trunk_Hinge",
+      "pivot": [
+        0.00023299877083554074,
+        1.2040478990923877,
+        -1.6487686100763062
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "maxAngleDegrees": 65,
+      "sourcePivotNode": 158,
+      "sourcePivotName": "boot_dummy",
+      "status": "original source hinge retained; engineering motion limits"
+    },
+    "steering_wheel": {
+      "node": "Steering_Wheel_Pivot",
+      "pivot": [
+        0.41974547330715806,
+        0.827849383961813,
+        0.4044712203224052
+      ],
+      "axis": [
+        0.0,
+        -0.3027859119713343,
+        0.9530585981521218
+      ],
+      "maxAngleDegrees": 0,
+      "sourcePivotNode": 20,
+      "sourcePivotName": "steering_dummy",
+      "status": "original source hinge retained; engineering motion limits"
+    }
+  },
+  "lights": {
+    "headlights": [
+      "M3_55_chrome_Lights_head_l_right_front_light_0",
+      "M3_56_chrome_Lights_head_l_left_front_light_0",
+      "M3_259_foglights_r_foglight_r_0",
+      "M3_261_foglights_l_foglight_l_0"
+    ],
+    "brake": [
+      "M3_49_light_breake_breaklight_l_0",
+      "M3_60_breake_int_breaklight_l_0",
+      "M3_47_rear_lights_right_rear_light_0",
+      "M3_177_rear_lightsr_right_rear_light_0",
+      "M3_179_rear_lightsl_left_rear_light_0"
+    ],
+    "reverse": [
+      "M3_181_lightrevese_boot_revlight_L_0"
+    ],
+    "indicatorLeft": [
+      "M3_68_turn_indicat_l_indicator_lf_0",
+      "M3_265_indicator_lights_l_indicator_lf_0",
+      "M3_173_light_turn_lr_boot_indicator_lr_0"
+    ],
+    "indicatorRight": [
+      "M3_70_turn_indicat_r_indicator_rf_0",
+      "M3_263_indicator_lights_r_indicator_rf_0",
+      "M3_171_light_turn_rr_boot_indicator_rr_0"
+    ]
+  },
+  "images": [
+    {
+      "sha256": "62845693afa29f5c76776549459043084e8176783f9c22f7f92c2e9d3dd3da9d",
+      "bytes": 22928,
+      "width": 256,
+      "height": 256
+    },
+    {
+      "sha256": "846a2f82986b23798fe6b67e4845d048b522bd4efd9dad2957fb309ba489884a",
+      "bytes": 864,
+      "width": 256,
+      "height": 256
+    },
+    {
+      "sha256": "55daba106cf7b206ce686083816a0c7cc75469ecbbd349fe1fe0336394a2832d",
+      "bytes": 81,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "sha256": "122bde5de296d41f59afd634221969a4ded516da134eec4373606e2ceffd8eb3",
+      "bytes": 81,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "sha256": "4b623166c0b2d5a9b3e2b505aa2f56bf8f64020009b19f04d25a7f2eab20c649",
+      "bytes": 107731,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sha256": "dda8b1ddc3fed9d2ce79f11f3f4e9165d967ff3863fad742e9c042e0a9fa18ca",
+      "bytes": 239622,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "sha256": "53bbe961b7f0b98022835e05e7d727ac39903638b307ab5aa2d8dd2e99784c5d",
+      "bytes": 81,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "sha256": "1e724e1406154b662dfd7fdf21da1ce56fcabfac0ac5fdefa241ea284f5c389e",
+      "bytes": 84,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "sha256": "aa095534043ce763f206b63729f6ccc1939e4e286698f6a80ceb9da689627e16",
+      "bytes": 118924,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "sha256": "dee2a6caefad3d5d4854008de57b92ffef4775044f31acf3a548b914b219b4ac",
+      "bytes": 259,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "sha256": "320b247478f5975dcaac9bd8202c00d46ec226ff83416fac7e35f81fecdbe16e",
+      "bytes": 39108,
+      "width": 128,
+      "height": 128
+    },
+    {
+      "sha256": "41e30997a9524bff63bbb89c27d7ab7e8ec7fbc50d1db1ad4f81b2099e4b43b6",
+      "bytes": 169814,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sha256": "1c569ad5c17df7b99b20db478b39d838e916f431273e547671b3b2f9297bfef9",
+      "bytes": 31674,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "sha256": "0e53166e00b9dc41814f4db2ef7d58fab2a4588ec631574cdc2fd4acb5a2f7c0",
+      "bytes": 128995,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sha256": "b2163ae459c98960fd0f364ddab1d8f964dc74fb3291f3f2e1d43596bad02716",
+      "bytes": 126,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sha256": "b2163ae459c98960fd0f364ddab1d8f964dc74fb3291f3f2e1d43596bad02716",
+      "bytes": 126,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sha256": "fbf1176cc3f6c60d026de10932b428f1a525a1530d8fef1c65c6081beff4a347",
+      "bytes": 185876,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "sha256": "841727e0a96932caf0ed90b27062797fcacf93c2cc00f70d2e092a453803d14a",
+      "bytes": 212,
+      "width": 32,
+      "height": 32
+    },
+    {
+      "sha256": "249e6870a0a4e62a66cf87fdd822c6dfaeea5ff01f87b37738bbf79f5ff21500",
+      "bytes": 216070,
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "sha256": "0c8d3eede4d4b360d8d2bf6f5cd3a99486cb791b034fa38800e44a69b373d072",
+      "bytes": 112602,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sha256": "60bd174d3d5b35c4d1fe6beaa68f670d326e3eb26c867ea9db4baafc26d3e25f",
+      "bytes": 46269,
+      "width": 256,
+      "height": 256
+    },
+    {
+      "sha256": "1b6137125d0390c235ed86796b79572bd45f349d1ef2a337a499822dc089c312",
+      "bytes": 214126,
+      "width": 1024,
+      "height": 1024
+    }
+  ],
+  "headlightEmitters": [
+    {
+      "position": [
+        -0.5816882584750557,
+        0.6501926668565723,
+        1.8691494685194072
+      ],
+      "sourceNode": "M3_55_chrome_Lights_head_l_right_front_light_0"
+    },
+    {
+      "position": [
+        0.5820766008445099,
+        0.6501926668565723,
+        1.8691494685194072
+      ],
+      "sourceNode": "M3_56_chrome_Lights_head_l_left_front_light_0"
+    }
+  ],
+  "rigLimits": {
+    "recommendedCompressionMeters": 0.02,
+    "recommendedDroopMeters": 0.09,
+    "maximumFrontSteeringDegrees": 35,
+    "basis": "source external wheel arches clear at +25 mm and intersect at +30 mm; 20 mm chosen with 5 mm sampled margin; inner black liners and original suspension decor still intersect as documented in reports/model3-wheel-verification.json",
+    "engineeringLimitsNotFactorySpecifications": true
+  },
+  "centerOfMassReference": {
+    "position": [
+      0,
+      0.52,
+      -0.04
+    ],
+    "status": "engineering estimate; not a measured Tesla value"
+  },
+  "visualIdentity": {
+    "status": "2018 Model 3 source mesh; exact Performance Upgrade appearance not established",
+    "knownDifferences": [
+      "Wheel pattern and size not verified as factory 20-inch Sport Wheels",
+      "No verified Performance rear spoiler or red Performance brake calipers",
+      "Source rear wheels are 1.807% larger than front wheels",
+      "Body/track proportions differ from the historical manual; a single uniform scale retains source appearance"
+    ]
+  },
+  "transforms": {
+    "wheelFrontDownwardCorrection": "front centers rigidly moved down approximately 6 mm to make four visual tires contact the same ground",
+    "scaling": "single uniform global scale; no body part stretching, decimation, wheel replacement, or hidden original wheel geometry"
+  },
+  "license": {
+    "name": "CC-BY-4.0",
+    "author": "Ameer Studio",
+    "authorUrl": "https://sketchfab.com/uchiha.321abc",
+    "sourceUrl": "https://sketchfab.com/3d-models/tesla-2018-model-3-5ef9b845aaf44203b6d04e2c677e444f",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "provenance": "embedded asset.extras in supplied source; source-page availability must be rechecked for public release"
+  },
+  "output": {
+    "path": "public/models/model3-drive-ready.glb",
+    "sha256": "03813e470659d4b1a41c2d683f772b41988d48bb42a632045d079f31ba6bd5f7",
+    "bytes": 22668584,
+    "triangles": 684315,
+    "vertices": 394055,
+    "meshes": 190,
+    "nodes": 213,
+    "materials": 58,
+    "images": 22
+  },
+  "originalUnchanged": true
+}

@@ -1,0 +1,20 @@
+{
+  "event": "slopes-complete",
+  "passed": true,
+  "runs": [
+    {
+      "id": "A5",
+      "finished": true,
+      "peak": 11.251904198445162,
+      "air": false,
+      "landed": false
+    },
+    {
+      "id": "D5",
+      "finished": true,
+      "peak": 7.228473232054399,
+      "air": true,
+      "landed": true
+    }
+  ]
+}

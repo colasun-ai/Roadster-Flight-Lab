@@ -1,0 +1,1188 @@
+{
+  "inputSha256": "0110e4d5ccdc40407cebded2ec68d1d5f835d0127badf7506cd9fe6960c73004",
+  "inputPath": "assets/originals/tesla roadtser 2026.glb",
+  "scale": 2.4253196259985814,
+  "temporaryLengthMeters": 4.6,
+  "lengthIsOfficial": false,
+  "axes": {
+    "up": "+Y",
+    "forward": "+Z",
+    "left": "+X",
+    "right": "-X",
+    "rollingAxis": "+X for ALL wheels",
+    "positiveRolling": "forward +Z",
+    "positiveSteering": "left (+X)"
+  },
+  "rootOrigin": "Ground level, original full-model XZ bounding-box center; geometry transforms baked to meters",
+  "sourceOrigin": [
+    -0.0002765059471130371,
+    0.0,
+    0.002408266067504883
+  ],
+  "suspensionTestTravelMeters": 0.015,
+  "steeringRangeDegrees": [
+    -35,
+    35
+  ],
+  "clearanceMarginMeters": 0.006,
+  "originalTextureSha256": "bbeaaa92a2fb59358cc71a8271afd7e9f30202e9199e5e88a376348a6d0cd320",
+  "body": {
+    "vertices": 343411,
+    "triangles": 309492,
+    "boundsMin": [
+      -0.9723604321479797,
+      0.061732713133096695,
+      -2.299999952316284
+    ],
+    "boundsMax": [
+      0.974115252494812,
+      1.2168786525726318,
+      2.299999952316284
+    ],
+    "dimensions": [
+      1.9464757442474365,
+      1.1551458835601807,
+      4.599999904632568
+    ],
+    "positionWeldedComponents": 1,
+    "boundaryEdges": 0,
+    "nonManifoldEdges": 0,
+    "degenerateTriangles": 0,
+    "nonfiniteValues": 0,
+    "normalLengthMin": 0.9999998807907104,
+    "normalLengthMax": 1.0,
+    "uvMin": [
+      0.0,
+      0.0
+    ],
+    "uvMax": [
+      0.999000072479248,
+      0.9990000128746033
+    ]
+  },
+  "wheels": {
+    "FL": {
+      "centerMeters": [
+        0.7912354149641546,
+        0.33804292334653646,
+        1.2788189546410051
+      ],
+      "radiusMeters": 0.33804292334653646,
+      "widthMeters": 0.3940641900593539,
+      "sourceCenter": [
+        0.3259631395339966,
+        0.14122171601773228,
+        0.5254567232727348
+      ],
+      "mesh": {
+        "vertices": 91814,
+        "triangles": 62668,
+        "boundsMin": [
+          -0.19703209400177002,
+          -0.3378840684890747,
+          -0.33790087699890137
+        ],
+        "boundsMax": [
+          0.19703209400177002,
+          0.33802202343940735,
+          0.3380001187324524
+        ],
+        "dimensions": [
+          0.39406418800354004,
+          0.6759060621261597,
+          0.6759009957313538
+        ],
+        "positionWeldedComponents": 1,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "degenerateTriangles": 0,
+        "nonfiniteValues": 0,
+        "normalLengthMin": 0.9999998807907104,
+        "normalLengthMax": 1.0,
+        "uvMin": [
+          0.0011041462421417236,
+          0.0031470060348510742
+        ],
+        "uvMax": [
+          0.9953378438949585,
+          0.8944912552833557
+        ]
+      },
+      "method": "USER-APPROVED: independent copy of same-side original rear tire and rim; common front radius/width calibrated from original front wheels; original fused front geometry removed from body; no cylinder replacement.",
+      "treadCorrection": {
+        "method": "Radial correction of original tire vertices with smooth blend; hub below 72% radius and axial coordinates unchanged; UV retained. No replacement mesh.",
+        "maximumVertexDisplacementSourceUnits": 0.0046723950654268265,
+        "meanVertexDisplacementSourceUnits": 0.0009694352629594505,
+        "targetRadiusSourceUnits": 0.14643337169536227,
+        "sourceRearWheel": "RL",
+        "frontWidthScale": 1.0029825111375046,
+        "frontRadialScale": 0.9518372400681212,
+        "maximumVertexDisplacementMeters": 0.011332051452598609
+      },
+      "newSurfaceTriangleCount": 0,
+      "originalSurfaceTriangleCount": 62668,
+      "axleAlignmentTranslationMeters": [
+        0.0,
+        -0.004464876128467873,
+        0.010259266032881851
+      ]
+    },
+    "FR": {
+      "centerMeters": [
+        -0.7912354149641546,
+        0.33804292238234573,
+        1.2788189546410051
+      ],
+      "radiusMeters": 0.33804292238234573,
+      "widthMeters": 0.3940641900593539,
+      "sourceCenter": [
+        -0.32651615142822266,
+        0.14159880519748838,
+        0.5339168585249351
+      ],
+      "mesh": {
+        "vertices": 96804,
+        "triangles": 65498,
+        "boundsMin": [
+          -0.19703209400177002,
+          -0.33777594566345215,
+          -0.3377797305583954
+        ],
+        "boundsMax": [
+          0.19703209400177002,
+          0.33780473470687866,
+          0.33799463510513306
+        ],
+        "dimensions": [
+          0.39406418800354004,
+          0.6755806803703308,
+          0.675774335861206
+        ],
+        "positionWeldedComponents": 1,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "degenerateTriangles": 0,
+        "nonfiniteValues": 0,
+        "normalLengthMin": 0.9999998807907104,
+        "normalLengthMax": 1.0,
+        "uvMin": [
+          0.10349700599908829,
+          0.01647263765335083
+        ],
+        "uvMax": [
+          0.9968181848526001,
+          0.9989327192306519
+        ]
+      },
+      "method": "USER-APPROVED: independent copy of same-side original rear tire and rim; common front radius/width calibrated from original front wheels; original fused front geometry removed from body; no cylinder replacement.",
+      "treadCorrection": {
+        "method": "Radial correction of original tire vertices with smooth blend; hub below 72% radius and axial coordinates unchanged; UV retained. No replacement mesh.",
+        "maximumVertexDisplacementSourceUnits": 0.004982687067240477,
+        "meanVertexDisplacementSourceUnits": 0.0009320909157395363,
+        "targetRadiusSourceUnits": 0.14577716270325053,
+        "sourceRearWheel": "RR",
+        "frontWidthScale": 1.0034754164260085,
+        "frontRadialScale": 0.9561218465332194,
+        "maximumVertexDisplacementMeters": 0.012084608734387641
+      },
+      "newSurfaceTriangleCount": 0,
+      "originalSurfaceTriangleCount": 65498,
+      "axleAlignmentTranslationMeters": [
+        0.0,
+        -0.005379438881072754,
+        -0.010259266032881851
+      ]
+    },
+    "RL": {
+      "centerMeters": [
+        0.8040958619672747,
+        0.3551477875304204,
+        -1.527328160898259
+      ],
+      "radiusMeters": 0.3551477875304204,
+      "widthMeters": 0.3928923841477924,
+      "sourceCenter": [
+        0.33126571774482727,
+        0.1453625617988442,
+        -0.6284484626534832
+      ],
+      "mesh": {
+        "vertices": 91814,
+        "triangles": 62668,
+        "boundsMin": [
+          -0.19644619524478912,
+          -0.3549809157848358,
+          -0.35499849915504456
+        ],
+        "boundsMax": [
+          0.19644619524478912,
+          0.3551258146762848,
+          0.3551028072834015
+        ],
+        "dimensions": [
+          0.39289239048957825,
+          0.7101067304611206,
+          0.710101306438446
+        ],
+        "positionWeldedComponents": 1,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "degenerateTriangles": 0,
+        "nonfiniteValues": 0,
+        "normalLengthMin": 0.9999998807907104,
+        "normalLengthMax": 1.0,
+        "uvMin": [
+          0.0011041462421417236,
+          0.0031470060348510742
+        ],
+        "uvMax": [
+          0.9953378438949585,
+          0.8944912552833557
+        ]
+      },
+      "method": "Exact original geometric connected component; original UV and rim retained; original tread vertices locally regularized for continuous rolling",
+      "treadCorrection": {
+        "method": "Radial correction of original tire vertices with smooth blend; hub below 72% radius and axial coordinates unchanged; UV retained. No replacement mesh.",
+        "maximumVertexDisplacementSourceUnits": 0.0046723950654268265,
+        "meanVertexDisplacementSourceUnits": 0.0009694352629594505,
+        "targetRadiusSourceUnits": 0.14643337169536227,
+        "maximumVertexDisplacementMeters": 0.011332051452598609
+      },
+      "newSurfaceTriangleCount": 0,
+      "originalSurfaceTriangleCount": 62668,
+      "axleAlignmentTranslationMeters": [
+        0.0,
+        0.002597113514251984,
+        0.0027010444620163667
+      ]
+    },
+    "RR": {
+      "centerMeters": [
+        -0.7973662901938955,
+        0.35355628454511395,
+        -1.527328160898259
+      ],
+      "radiusMeters": 0.35355628454511395,
+      "widthMeters": 0.3926993961275685,
+      "sourceCenter": [
+        -0.32904401421546936,
+        0.14624224760888777,
+        -0.6262210906955258
+      ],
+      "mesh": {
+        "vertices": 96804,
+        "triangles": 65498,
+        "boundsMin": [
+          -0.19634969532489777,
+          -0.3532770872116089,
+          -0.3532811105251312
+        ],
+        "boundsMax": [
+          0.19634969532489777,
+          0.35330715775489807,
+          0.35350579023361206
+        ],
+        "dimensions": [
+          0.39269939064979553,
+          0.7065842151641846,
+          0.7067868709564209
+        ],
+        "positionWeldedComponents": 1,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "degenerateTriangles": 0,
+        "nonfiniteValues": 0,
+        "normalLengthMin": 0.9999998807907104,
+        "normalLengthMax": 1.0,
+        "uvMin": [
+          0.10349700599908829,
+          0.01647263765335083
+        ],
+        "uvMax": [
+          0.9968181848526001,
+          0.9989327192306519
+        ]
+      },
+      "method": "Exact original geometric connected component; original UV and rim retained; original tread vertices locally regularized for continuous rolling",
+      "treadCorrection": {
+        "method": "Radial correction of original tire vertices with smooth blend; hub below 72% radius and axial coordinates unchanged; UV retained. No replacement mesh.",
+        "maximumVertexDisplacementSourceUnits": 0.004982687067240477,
+        "meanVertexDisplacementSourceUnits": 0.0009320909157395363,
+        "targetRadiusSourceUnits": 0.14577716270325053,
+        "maximumVertexDisplacementMeters": 0.012084608734387641
+      },
+      "newSurfaceTriangleCount": 0,
+      "originalSurfaceTriangleCount": 65498,
+      "axleAlignmentTranslationMeters": [
+        0.0,
+        -0.0011279087308656674,
+        -0.002701044462016636
+      ]
+    }
+  },
+  "operations": [
+    {
+      "wheel": "FL",
+      "fit": [
+        0.14122171601773228,
+        0.5254567232727348,
+        0.1389255807337138
+      ],
+      "centerOriginal": [
+        0.3235709071159363,
+        0.14122171601773228,
+        0.5254567232727348
+      ],
+      "frontIntersectionParts": 1,
+      "keptVolume": 0.006291122699936739,
+      "removedFragmentVolume": 0,
+      "originalFrontIntersectionUsedForCalibrationOnly": true,
+      "originalFrontRemovalRadiusSourceUnits": 0.14448260396306237
+    },
+    {
+      "wheel": "FR",
+      "fit": [
+        0.14159880519748838,
+        0.5339168585249351,
+        0.1398359423213445
+      ],
+      "centerOriginal": [
+        -0.32890838384628296,
+        0.14159880519748838,
+        0.5339168585249351
+      ],
+      "frontIntersectionParts": 1,
+      "keptVolume": 0.006215976051161979,
+      "removedFragmentVolume": 0,
+      "originalFrontIntersectionUsedForCalibrationOnly": true,
+      "originalFrontRemovalRadiusSourceUnits": 0.14542938001419828
+    }
+  ],
+  "collisionTests": [
+    {
+      "wheel": "FL",
+      "steeringDegrees": -35,
+      "rollingDegrees": 0,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": -35,
+      "rollingDegrees": 0,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": -35,
+      "rollingDegrees": 0,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": -35,
+      "rollingDegrees": 90,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": -35,
+      "rollingDegrees": 90,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": -35,
+      "rollingDegrees": 90,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": -35,
+      "rollingDegrees": 180,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": -35,
+      "rollingDegrees": 180,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": -35,
+      "rollingDegrees": 180,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": -35,
+      "rollingDegrees": 270,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": -35,
+      "rollingDegrees": 270,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": -35,
+      "rollingDegrees": 270,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 0,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 0,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 0,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 90,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 90,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 90,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 180,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 180,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 180,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 270,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 270,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 270,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 35,
+      "rollingDegrees": 0,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 35,
+      "rollingDegrees": 0,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 35,
+      "rollingDegrees": 0,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 35,
+      "rollingDegrees": 90,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 35,
+      "rollingDegrees": 90,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 35,
+      "rollingDegrees": 90,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 35,
+      "rollingDegrees": 180,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 35,
+      "rollingDegrees": 180,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 35,
+      "rollingDegrees": 180,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 35,
+      "rollingDegrees": 270,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 35,
+      "rollingDegrees": 270,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FL",
+      "steeringDegrees": 35,
+      "rollingDegrees": 270,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": -35,
+      "rollingDegrees": 0,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": -35,
+      "rollingDegrees": 0,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": -35,
+      "rollingDegrees": 0,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": -35,
+      "rollingDegrees": 90,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": -35,
+      "rollingDegrees": 90,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": -35,
+      "rollingDegrees": 90,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": -35,
+      "rollingDegrees": 180,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": -35,
+      "rollingDegrees": 180,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": -35,
+      "rollingDegrees": 180,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": -35,
+      "rollingDegrees": 270,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": -35,
+      "rollingDegrees": 270,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": -35,
+      "rollingDegrees": 270,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 0,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 0,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 0,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 90,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 90,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 90,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 180,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 180,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 180,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 270,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 270,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 270,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 35,
+      "rollingDegrees": 0,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 35,
+      "rollingDegrees": 0,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 35,
+      "rollingDegrees": 0,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 35,
+      "rollingDegrees": 90,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 35,
+      "rollingDegrees": 90,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 35,
+      "rollingDegrees": 90,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 35,
+      "rollingDegrees": 180,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 35,
+      "rollingDegrees": 180,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 35,
+      "rollingDegrees": 180,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 35,
+      "rollingDegrees": 270,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 35,
+      "rollingDegrees": 270,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "FR",
+      "steeringDegrees": 35,
+      "rollingDegrees": 270,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 0,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 0,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 0,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 90,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 90,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 90,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 180,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 180,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 180,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 270,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 270,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RL",
+      "steeringDegrees": 0,
+      "rollingDegrees": 270,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 0,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 0,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 0,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 90,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 90,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 90,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 180,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 180,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 180,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 270,
+      "suspensionMeters": -0.015,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 270,
+      "suspensionMeters": 0.0,
+      "intersectionCubicMeters": 0.0
+    },
+    {
+      "wheel": "RR",
+      "steeringDegrees": 0,
+      "rollingDegrees": 270,
+      "suspensionMeters": 0.015,
+      "intersectionCubicMeters": 0.0
+    }
+  ],
+  "centerOfMassReferenceMeters": [
+    0,
+    0.45,
+    0
+  ],
+  "centerOfMassIsEstimated": true,
+  "wheelbaseMeters": 2.806147115539264,
+  "frontTrackMeters": 1.5824708299283092,
+  "rearTrackMeters": 1.60146215216117,
+  "outputBytes": 32287432,
+  "outputSha256": "690c25b8795680fa39a9b9ebaab5aefcb2529a99c14fd2990aacc20e18ffcdd2",
+  "originalUnchanged": true,
+  "totalTriangles": 565824,
+  "nodeTree": [
+    {
+      "name": "Roadster",
+      "children": [
+        1,
+        2,
+        6,
+        10,
+        13,
+        16
+      ],
+      "extras": {
+        "vehicle": {
+          "units": "meters",
+          "forward": "+Z",
+          "up": "+Y",
+          "left": "+X",
+          "rollAxis": "+X",
+          "scaleIsTemporary": true,
+          "temporaryLengthMeters": 4.6,
+          "suspensionTravelMeters": 0.015,
+          "steeringLimitDegrees": 35,
+          "centerOfMassReferenceEstimated": true
+        }
+      }
+    },
+    {
+      "name": "Body",
+      "mesh": 0
+    },
+    {
+      "name": "Wheel_FL_Suspension",
+      "translation": [
+        0.7912354149641546,
+        0.33804292334653646,
+        1.2788189546410051
+      ],
+      "children": [
+        3
+      ]
+    },
+    {
+      "name": "Wheel_FL_Steering",
+      "children": [
+        4
+      ]
+    },
+    {
+      "name": "Wheel_FL_Rotation",
+      "children": [
+        5
+      ]
+    },
+    {
+      "name": "Wheel_FL",
+      "mesh": 1
+    },
+    {
+      "name": "Wheel_FR_Suspension",
+      "translation": [
+        -0.7912354149641546,
+        0.33804292238234573,
+        1.2788189546410051
+      ],
+      "children": [
+        7
+      ]
+    },
+    {
+      "name": "Wheel_FR_Steering",
+      "children": [
+        8
+      ]
+    },
+    {
+      "name": "Wheel_FR_Rotation",
+      "children": [
+        9
+      ]
+    },
+    {
+      "name": "Wheel_FR",
+      "mesh": 2
+    },
+    {
+      "name": "Wheel_RL_Suspension",
+      "translation": [
+        0.8040958619672747,
+        0.3551477875304204,
+        -1.527328160898259
+      ],
+      "children": [
+        11
+      ]
+    },
+    {
+      "name": "Wheel_RL_Rotation",
+      "children": [
+        12
+      ]
+    },
+    {
+      "name": "Wheel_RL",
+      "mesh": 3
+    },
+    {
+      "name": "Wheel_RR_Suspension",
+      "translation": [
+        -0.7973662901938955,
+        0.35355628454511395,
+        -1.527328160898259
+      ],
+      "children": [
+        14
+      ]
+    },
+    {
+      "name": "Wheel_RR_Rotation",
+      "children": [
+        15
+      ]
+    },
+    {
+      "name": "Wheel_RR",
+      "mesh": 4
+    },
+    {
+      "name": "CenterOfMass_Reference",
+      "translation": [
+        0,
+        0.45,
+        0
+      ],
+      "extras": {
+        "estimated": true,
+        "purpose": "Reference only. Not a measured center of mass and not physics mass properties."
+      }
+    }
+  ],
+  "maxOverlapCubicMeters": 0.0
+}

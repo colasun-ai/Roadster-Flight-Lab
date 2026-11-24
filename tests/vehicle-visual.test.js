@@ -1,0 +1,19 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {Texture} from 'three';import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';import {batchStaticVehicle} from '../src/rendering/VehicleBatching.js';import {Model3Visual} from '../src/vehicles/model3/Model3Visual.js';
+const reports=[];
+async function load(path){const bytes=fs.readFileSync(path),loader=new GLTFLoader();loader.register(parser=>({name:'NodeStructureTextureStub',beforeRoot(){parser.loadTexture=()=>Promise.resolve(new Texture());}}));return (await loader.parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'')).scene;}
+for(const name of ['model3','model-y']){
+ const glb=name==='model3'?'model3-drive-ready.glb':'model-y-performance-drive-ready.glb',metadata=JSON.parse(fs.readFileSync(`public/models/${name}-geometry.json`)),root=await load(`public/models/${glb}`),originalMaterials=new Map();root.traverse(o=>{if(o.isMesh)originalMaterials.set(o,o.material);});
+ const rig=metadata.wheels.map(w=>({s:root.getObjectByName(w.suspensionNode),r:root.getObjectByName(w.rotationNode),t:w.steeringNode?root.getObjectByName(w.steeringNode):null}));
+ const boundsBefore={};root.traverse(o=>{if(o.isMesh){const g=o.geometry;g.computeBoundingBox();boundsBefore[o.name]=[g.index?.count??g.attributes.position.count,g.attributes.uv?.count??0];}});
+ const batching=batchStaticVehicle(root,metadata);assert.equal(batching.beforeTriangles,batching.afterTriangles);assert.ok(batching.afterMeshes<batching.beforeMeshes);
+ metadata.wheels.forEach((w,i)=>{assert.equal(root.getObjectByName(w.suspensionNode),rig[i].s);assert.equal(root.getObjectByName(w.rotationNode),rig[i].r);});
+ for(const part of Object.values(metadata.interactions||{}))assert.ok(root.getObjectByName(part.node));for(const names of Object.values(metadata.lights||{}))for(const node of names)assert.ok(root.getObjectByName(node));
+ const visual=new Model3Visual(root,metadata),vehicle={wheels:metadata.wheels.map((w,i)=>({id:w.id,angle:.75+i,steer:i<2?.22:0,compression:i*.005})),steer:.2,forwardSpeed:()=>0};
+ visual.setLights({headlights:true,indicator:'hazard',brake:true});visual.update(vehicle,.1);for(const mesh of visual.lightMeshes.headlights){assert.equal(mesh.material.emissiveIntensity,3.4);assert.equal(mesh.material.emissiveMap,null);}assert.ok(visual.headlightBeams.every(b=>b.visible));
+ visual.setLights({headlights:false,indicator:'off',brake:false});visual.update(vehicle,.1);for(const mesh of visual.lightMeshes.headlights){assert.equal(mesh.material.emissiveIntensity,0);assert.equal(mesh.material.emissive.getHex(),0);}assert.ok(visual.headlightBeams.every(b=>!b.visible));
+ visual.wheels.forEach((w,i)=>{assert.equal(w.rotation.rotation.x,.75+i);assert.ok(Math.abs(w.suspension.position.y-w.homeY-i*.005)<1e-12);});
+ if(name==='model3'){assert.equal(visual.setInteraction('door_fl',true),true);visual.update(vehicle,.5);assert.ok(visual.interactions.get('door_fl').target!==0);vehicle.forwardSpeed=()=>3;visual.update(vehicle,.1);assert.equal(visual.interactions.get('door_fl').target,0);}
+ if(name==='model3')assert.equal(root.getObjectByName('M3_267_tembus_depan_ok_tembus_red_0_0').material.opacity,.18);
+ const ownedMaterials=visual.ownedMaterials.size;visual.dispose();visual.dispose();for(const [node,material]of originalMaterials)assert.equal(node.material,material);assert.ok(visual.wheels.every(w=>w.suspension.position.y===w.homeY));reports.push({name,passed:true,batching,ownedMaterials,limits:'Node GLTFLoader with texture placeholders verifies geometry structure/material state only; real image decoding and native lamp appearance checked separately.'});
+}
+fs.writeFileSync('reports/vehicle-visual-structure-results.json',JSON.stringify({at:new Date().toISOString(),passed:true,reports},null,2));console.log(JSON.stringify(reports.map(({name,batching})=>({name,batching})),null,2));

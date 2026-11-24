@@ -1,0 +1,608 @@
+{
+  "passed": true,
+  "lanes": 20,
+  "solids": 25,
+  "rayCount": 1788,
+  "passes": [
+    {
+      "vehicle": "model3-performance-2018",
+      "id": "A1",
+      "finished": true,
+      "peakM": 2.72,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model3-performance-2018",
+      "id": "A2",
+      "finished": true,
+      "peakM": 4.8,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model3-performance-2018",
+      "id": "A3",
+      "finished": true,
+      "peakM": 10.5,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model3-performance-2018",
+      "id": "A4",
+      "finished": true,
+      "peakM": 8.75,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model3-performance-2018",
+      "id": "A5",
+      "finished": true,
+      "peakM": 11.25,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model3-performance-2018",
+      "id": "B1",
+      "finished": true,
+      "peakM": 1.63,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model3-performance-2018",
+      "id": "B2",
+      "finished": true,
+      "peakM": 0.42,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model3-performance-2018",
+      "id": "B3",
+      "finished": true,
+      "peakM": 1.91,
+      "maxRollDeg": 0.3,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model3-performance-2018",
+      "id": "B4",
+      "finished": true,
+      "peakM": 3.16,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model3-performance-2018",
+      "id": "B5",
+      "finished": true,
+      "peakM": 0.08,
+      "maxRollDeg": 0.1,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model3-performance-2018",
+      "id": "C1",
+      "finished": true,
+      "peakM": 0.95,
+      "maxRollDeg": 9.4,
+      "maxOffCentreM": 0.09,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model3-performance-2018",
+      "id": "C2",
+      "finished": true,
+      "peakM": 1.3,
+      "maxRollDeg": 12.8,
+      "maxOffCentreM": 0.12,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model3-performance-2018",
+      "id": "C3",
+      "finished": true,
+      "peakM": 1.15,
+      "maxRollDeg": 9.2,
+      "maxOffCentreM": 0.08,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model3-performance-2018",
+      "id": "C4",
+      "finished": true,
+      "peakM": 0.37,
+      "maxRollDeg": 11.2,
+      "maxOffCentreM": 0.06,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model3-performance-2018",
+      "id": "C5",
+      "finished": true,
+      "peakM": 0.85,
+      "maxRollDeg": 7.8,
+      "maxOffCentreM": 0.05,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model3-performance-2018",
+      "id": "D1",
+      "finished": true,
+      "peakM": 2.4,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model3-performance-2018",
+      "id": "D2",
+      "finished": true,
+      "peakM": 2.65,
+      "maxRollDeg": 0.4,
+      "maxOffCentreM": 0.08,
+      "airSeconds": 0.925,
+      "landed": true
+    },
+    {
+      "vehicle": "model3-performance-2018",
+      "id": "D3",
+      "finished": true,
+      "peakM": 1.58,
+      "maxRollDeg": 0.2,
+      "maxOffCentreM": 0.06,
+      "airSeconds": 0.667,
+      "landed": true
+    },
+    {
+      "vehicle": "model3-performance-2018",
+      "id": "D4",
+      "finished": true,
+      "peakM": 2.25,
+      "maxRollDeg": 0.1,
+      "maxOffCentreM": 0.05,
+      "airSeconds": 0.633,
+      "landed": true
+    },
+    {
+      "vehicle": "model3-performance-2018",
+      "id": "D5",
+      "finished": true,
+      "peakM": 7.11,
+      "maxRollDeg": 0.6,
+      "maxOffCentreM": 0.31,
+      "airSeconds": 1.692,
+      "landed": true
+    },
+    {
+      "vehicle": "roadster",
+      "id": "A1",
+      "finished": true,
+      "peakM": 2.72,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "roadster",
+      "id": "A2",
+      "finished": true,
+      "peakM": 4.8,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "roadster",
+      "id": "A3",
+      "finished": true,
+      "peakM": 10.5,
+      "maxRollDeg": 0.1,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "roadster",
+      "id": "A4",
+      "finished": true,
+      "peakM": 8.75,
+      "maxRollDeg": 0.1,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "roadster",
+      "id": "A5",
+      "finished": true,
+      "peakM": 11.25,
+      "maxRollDeg": 0.2,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "roadster",
+      "id": "B1",
+      "finished": true,
+      "peakM": 1.63,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "roadster",
+      "id": "B2",
+      "finished": true,
+      "peakM": 0.43,
+      "maxRollDeg": 0.1,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "roadster",
+      "id": "B3",
+      "finished": true,
+      "peakM": 1.91,
+      "maxRollDeg": 0.2,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "roadster",
+      "id": "B4",
+      "finished": true,
+      "peakM": 3.16,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "roadster",
+      "id": "B5",
+      "finished": true,
+      "peakM": 0.09,
+      "maxRollDeg": 0.1,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "roadster",
+      "id": "C1",
+      "finished": true,
+      "peakM": 0.95,
+      "maxRollDeg": 9.3,
+      "maxOffCentreM": 0.1,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "roadster",
+      "id": "C2",
+      "finished": true,
+      "peakM": 1.3,
+      "maxRollDeg": 12.7,
+      "maxOffCentreM": 0.14,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "roadster",
+      "id": "C3",
+      "finished": true,
+      "peakM": 1.15,
+      "maxRollDeg": 9.1,
+      "maxOffCentreM": 0.09,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "roadster",
+      "id": "C4",
+      "finished": true,
+      "peakM": 0.37,
+      "maxRollDeg": 13,
+      "maxOffCentreM": 0.09,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "roadster",
+      "id": "C5",
+      "finished": true,
+      "peakM": 0.85,
+      "maxRollDeg": 7.7,
+      "maxOffCentreM": 0.05,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "roadster",
+      "id": "D1",
+      "finished": true,
+      "peakM": 2.4,
+      "maxRollDeg": 0.2,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "roadster",
+      "id": "D2",
+      "finished": true,
+      "peakM": 2.65,
+      "maxRollDeg": 1.2,
+      "maxOffCentreM": 0.1,
+      "airSeconds": 0.808,
+      "landed": true
+    },
+    {
+      "vehicle": "roadster",
+      "id": "D3",
+      "finished": true,
+      "peakM": 1.58,
+      "maxRollDeg": 0.5,
+      "maxOffCentreM": 0.06,
+      "airSeconds": 0.542,
+      "landed": true
+    },
+    {
+      "vehicle": "roadster",
+      "id": "D4",
+      "finished": true,
+      "peakM": 2.25,
+      "maxRollDeg": 0.3,
+      "maxOffCentreM": 0.09,
+      "airSeconds": 0.808,
+      "landed": true
+    },
+    {
+      "vehicle": "roadster",
+      "id": "D5",
+      "finished": true,
+      "peakM": 7.11,
+      "maxRollDeg": 6.1,
+      "maxOffCentreM": 0.52,
+      "airSeconds": 1.483,
+      "landed": true
+    },
+    {
+      "vehicle": "model-y-performance-2026",
+      "id": "A1",
+      "finished": true,
+      "peakM": 2.72,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model-y-performance-2026",
+      "id": "A2",
+      "finished": true,
+      "peakM": 4.8,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model-y-performance-2026",
+      "id": "A3",
+      "finished": true,
+      "peakM": 10.5,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model-y-performance-2026",
+      "id": "A4",
+      "finished": true,
+      "peakM": 8.75,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model-y-performance-2026",
+      "id": "A5",
+      "finished": true,
+      "peakM": 11.25,
+      "maxRollDeg": 0.1,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model-y-performance-2026",
+      "id": "B1",
+      "finished": true,
+      "peakM": 1.64,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model-y-performance-2026",
+      "id": "B2",
+      "finished": true,
+      "peakM": 0.42,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model-y-performance-2026",
+      "id": "B3",
+      "finished": true,
+      "peakM": 1.92,
+      "maxRollDeg": 0.2,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model-y-performance-2026",
+      "id": "B4",
+      "finished": true,
+      "peakM": 3.17,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model-y-performance-2026",
+      "id": "B5",
+      "finished": true,
+      "peakM": 0.07,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model-y-performance-2026",
+      "id": "C1",
+      "finished": true,
+      "peakM": 0.95,
+      "maxRollDeg": 9.4,
+      "maxOffCentreM": 0.09,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model-y-performance-2026",
+      "id": "C2",
+      "finished": true,
+      "peakM": 1.3,
+      "maxRollDeg": 12.9,
+      "maxOffCentreM": 0.12,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model-y-performance-2026",
+      "id": "C3",
+      "finished": true,
+      "peakM": 1.14,
+      "maxRollDeg": 9.2,
+      "maxOffCentreM": 0.08,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model-y-performance-2026",
+      "id": "C4",
+      "finished": true,
+      "peakM": 0.37,
+      "maxRollDeg": 11.4,
+      "maxOffCentreM": 0.05,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model-y-performance-2026",
+      "id": "C5",
+      "finished": true,
+      "peakM": 0.85,
+      "maxRollDeg": 7.8,
+      "maxOffCentreM": 0.04,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model-y-performance-2026",
+      "id": "D1",
+      "finished": true,
+      "peakM": 2.41,
+      "maxRollDeg": 0,
+      "maxOffCentreM": 0,
+      "airSeconds": 0,
+      "landed": false
+    },
+    {
+      "vehicle": "model-y-performance-2026",
+      "id": "D2",
+      "finished": true,
+      "peakM": 2.65,
+      "maxRollDeg": 0.7,
+      "maxOffCentreM": 0.09,
+      "airSeconds": 0.95,
+      "landed": true
+    },
+    {
+      "vehicle": "model-y-performance-2026",
+      "id": "D3",
+      "finished": true,
+      "peakM": 1.57,
+      "maxRollDeg": 0.3,
+      "maxOffCentreM": 0.05,
+      "airSeconds": 0.658,
+      "landed": true
+    },
+    {
+      "vehicle": "model-y-performance-2026",
+      "id": "D4",
+      "finished": true,
+      "peakM": 2.25,
+      "maxRollDeg": 0.2,
+      "maxOffCentreM": 0,
+      "airSeconds": 0.733,
+      "landed": true
+    },
+    {
+      "vehicle": "model-y-performance-2026",
+      "id": "D5",
+      "finished": true,
+      "peakM": 7.12,
+      "maxRollDeg": 0.9,
+      "maxOffCentreM": 0.42,
+      "airSeconds": 1.683,
+      "landed": true
+    }
+  ]
+}

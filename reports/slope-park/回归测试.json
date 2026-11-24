@@ -1,0 +1,22 @@
+{
+  "test-results.json": {
+    "passed": 24,
+    "failed": 0
+  },
+  "thruster-test-results.json": {
+    "passed": 17,
+    "failed": 0
+  },
+  "refill-test-results.json": {
+    "passed": 7,
+    "failed": 0
+  },
+  "track-upgrade-test-results.json": {
+    "passed": 6,
+    "failed": 0
+  },
+  "handling-test-results.json": {
+    "passed": 22,
+    "failed": 0
+  }
+}

@@ -1,0 +1,71 @@
+name: Windows portable verification
+on:
+  workflow_dispatch:
+    inputs:
+      release:
+        description: Published tag to test, or leave empty to build from source
+        required: false
+        type: string
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: windows-2022
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Download the published executable
+        if: inputs.release != ''
+        env:
+          TAG: ${{ inputs.release }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          New-Item -Type Directory -Force desktop-build
+          gh release download $env:TAG --pattern '*-Windows-x64.exe' --dir desktop-build
+      - name: Build the complete offline executable
+        if: inputs.release == ''
+        run: |
+          npm ci
+          python scripts/fsd/prepare_windows_runtime.py
+          npm run pack:win
+      - name: Verify the payload and run bundled Plan-R1
+        run: |
+          $exe = (Get-ChildItem desktop-build/*-Windows-x64.exe).FullName
+          Get-FileHash $exe
+          7z e -y $exe '$PLUGINSDIR/app-64.7z' '-overify'
+          if ($LASTEXITCODE -ne 0) { throw 'Cannot open the portable wrapper' }
+          7z x -y verify/app-64.7z '-overify/game' | Select-Object -Last 8
+          if ($LASTEXITCODE -ne 0) { throw 'Cannot extract the payload' }
+          node scripts/fsd/smoke_portable.cjs verify/game/resources/fsd-runtime
+          if ($LASTEXITCODE -ne 0) { throw 'Packaged inference failed' }
+      - name: Start portable app and exercise the garage and city
+        run: |
+          $exe = (Get-ChildItem desktop-build/*-Windows-x64.exe).FullName
+          $log = Join-Path $env:RUNNER_TEMP 'roadster.jsonl'
+          $p = Start-Process -FilePath $exe -ArgumentList "--audit-output=$log","--audit-mode=garage-view","--use-angle=swiftshader","--enable-unsafe-swiftshader" -PassThru
+          try {
+            $until = (Get-Date).AddMinutes(5)
+            while ((Get-Date) -lt $until) {
+              if (Test-Path $log) {
+                $event = Get-Content -Encoding UTF8 $log | ForEach-Object { try { ($_ | ConvertFrom-Json -ErrorAction Stop).sample } catch {} } | Where-Object { $_.event -eq 'garage-view-complete' } | Select-Object -Last 1
+                if ($event) {
+                  $event | ConvertTo-Json -Depth 4
+                  if (!$event.passed) { throw 'Garage interaction failed' }
+                  exit 0
+                }
+              }
+              Start-Sleep 2
+            }
+            if (Test-Path $log) { Get-Content $log -Tail 10 }
+            throw 'Desktop audit timed out'
+          } finally { if (!$p.HasExited) { taskkill /PID $p.Id /T /F | Out-Null } }
+      - uses: actions/upload-artifact@v4
+        if: success() && inputs.release == ''
+        with:
+          name: windows-portable-x64
+          path: desktop-build/*-Windows-x64.exe
+          compression-level: 0
+          retention-days: 2
