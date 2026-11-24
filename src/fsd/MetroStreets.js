@@ -1,3 +1,4 @@
+import {t as uiText} from '../i18n/index.js';
 import * as THREE from 'three';
 import {at,distance} from './RoadNetwork.js';
 
@@ -111,7 +112,7 @@ export function addDirectionSigns(city){
       const canvas=document.createElement('canvas');canvas.width=512;canvas.height=144;
       const c=canvas.getContext('2d');c.fillStyle='#215b4c';c.fillRect(0,0,512,144);
       c.strokeStyle='#cde6d4';c.lineWidth=5;c.strokeRect(6,6,500,132);
-      c.fillStyle='#fff';c.font='bold 56px sans-serif';c.textAlign='center';c.fillText(label,256,91);
+      c.fillStyle='#fff';c.font='bold 56px sans-serif';c.textAlign='center';c.fillText(uiText(label),256,91);
       const map=new THREE.CanvasTexture(canvas);map.colorSpace=THREE.SRGBColorSpace;textures.set(label,map);materials.set(label,new THREE.MeshBasicMaterial({map}));
     }
     const p=at(lane,Math.min(28,lane.length/3)),dx=Math.cos(p.yaw),dz=-Math.sin(p.yaw);

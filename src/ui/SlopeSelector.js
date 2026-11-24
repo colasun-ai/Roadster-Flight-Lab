@@ -1,3 +1,4 @@
+import {t as uiText} from '../i18n/index.js';
 import {slopeCourses,slopeGroups} from '../world/SlopePark.js';
 import './slope-selector.css';
 
@@ -32,16 +33,16 @@ export function bindSlopeSelector({canOpen,onOpen,onCancel,onDrive}){
   for(const [i,b] of [...groups.children].entries())b.setAttribute('aria-pressed',String(i===c.group));
   lanes.replaceChildren(...slopeCourses.filter(v=>v.group===c.group).map(v=>{
    const b=document.createElement('button');b.type='button';b.dataset.course=v.id;
-   const id=document.createElement('small');id.textContent=v.id;b.append(id,v.name);
+   const id=document.createElement('small');id.textContent=uiText(v.id);b.append(id,uiText(v.name));
    b.setAttribute('aria-pressed',String(c===v));b.onclick=()=>show(v);return b;
   }));
-  dialog.querySelector('.slope-name').textContent=c.name;
-  dialog.querySelector('.slope-purpose').textContent=c.purpose;
+  dialog.querySelector('.slope-name').textContent=uiText(c.name);
+  dialog.querySelector('.slope-purpose').textContent=uiText(c.purpose);
   const peak=drawProfile(canvas,c);
-  dialog.querySelector('.slope-values').textContent=c.length+' m 长　 /　 '+peak.toFixed(2)+' m 最高　 /　 建议 '+c.speed+' km/h';
+  dialog.querySelector('.slope-values').textContent=uiText(c.length+' m 长　 /　 '+peak.toFixed(2)+' m 最高　 /　 建议 '+c.speed+' km/h');
  }
  for(const [i,g] of slopeGroups.entries()){
-  const b=document.createElement('button');b.type='button';b.textContent=g.name;
+  const b=document.createElement('button');b.type='button';b.textContent=uiText(g.name);
   b.onclick=()=>show(slopeCourses.find(c=>c.group===i));groups.append(b);
  }
  document.getElementById('slopes-open').onclick=()=>{

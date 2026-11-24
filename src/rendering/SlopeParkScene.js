@@ -1,3 +1,4 @@
+import {t as uiText} from '../i18n/index.js';
 import * as THREE from 'three';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 import {slopeCourses,slopeGroups,slopeSpines,slopeCrossings} from '../world/SlopePark.js';
@@ -61,9 +62,9 @@ export function drawSlopePark(track,{geometry,mesh,road,concrete,colored,paint,s
   const col=i%4,row=Math.floor(i/4),x=col*512,y=row*192;
   ctx.fillStyle='#1b2d34';ctx.fillRect(x,y,512,192);
   ctx.fillStyle=slopeGroups[c.group].color;ctx.fillRect(x,y,104,192);
-  ctx.fillStyle='#fff';ctx.textAlign='center';ctx.font='bold 55px sans-serif';ctx.fillText(c.id,x+52,y+112);
-  ctx.textAlign='left';ctx.font='600 48px sans-serif';ctx.fillText(c.name,x+123,y+84);
-  ctx.font='34px sans-serif';ctx.fillStyle='#d4dfda';ctx.fillText(c.speed+' km/h   ↑',x+123,y+146);
+  ctx.fillStyle='#fff';ctx.textAlign='center';ctx.font='bold 55px sans-serif';ctx.fillText(uiText(c.id),x+52,y+112);
+  ctx.textAlign='left';ctx.font='600 48px sans-serif';ctx.fillText(uiText(c.name),x+123,y+84);
+  ctx.font='34px sans-serif';ctx.fillStyle='#d4dfda';ctx.fillText(uiText(c.speed+' km/h   ↑'),x+123,y+146);
   const g=new THREE.PlaneGeometry(4.86,1.25);g.rotateY(Math.PI);g.translate(c.x-9,2.65,c.z-11.095);
   const uv=g.attributes.uv;for(let n=0;n<uv.count;n++)uv.setXY(n,(x+2+uv.getX(n)*508)/2048,1-(y+2+(1-uv.getY(n))*188)/1024);
   boards.push(g);

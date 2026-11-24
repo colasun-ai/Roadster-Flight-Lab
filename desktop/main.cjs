@@ -41,6 +41,20 @@ const planner=new Planner(app.isPackaged?path.join(process.resourcesPath,'fsd-ru
 ipcMain.handle('plan-r1-predict',(event,state)=>{if(!win||event.sender!==win.webContents||!event.senderFrame?.url.startsWith('roadster://app/'))throw Error('Untrusted planner request');return planner.predict(state);});
 app.on('before-quit',()=>planner.stop());
 let win;
+let language='en';
+function nativeText(text) {
+ if(language==='zh-CN') return text;
+ return require('../src/i18n/catalogs/'+language+'.json')[text] ?? text;
+}
+ipcMain.on('roadster-language',(event,code)=>{
+ if(!win || event.sender!==win.webContents || !event.senderFrame?.url.startsWith('roadster://app/')) return;
+ if(!['en','zh-CN','zh-TW','ja','ko','de','fr','es'].includes(code) || code===language) return;
+ language=code;updateMenu();
+});
+function updateMenu(){
+ const template=[...(process.platform==='darwin'?[{label:app.name,submenu:[{role:'about'},{type:'separator'},{role:'hide'},{role:'hideOthers'},{type:'separator'},{role:'quit'}]}]:[]),{label:nativeText('游戏'),submenu:[{label:nativeText('重新载入场景'),accelerator:'CmdOrCtrl+Shift+R',click:()=>{if(win&&!win.isDestroyed())win.webContents.reload();}},{role:'togglefullscreen',label:nativeText('全屏')},{type:'separator'},process.platform==='darwin'?{role:'close',label:nativeText('关闭窗口')}:{role:'quit',label:nativeText('退出')}]},{label:nativeText('帮助'),submenu:[{label:nativeText('操作与版本'),click:()=>dialog.showMessageBox(win,{type:'info',title:app.name,message:'Roadster Flight Lab '+app.getVersion(),detail:nativeText('WASD 驾驶 · Esc 车库 · Model 3：L 车灯 / T 驾驶模式 · Roadster：Shift 后喷 · J/K 升降 · 方向键翻滚 · H 悬浮 · T 模式 · R 重置 · C 相机。\n始终自动补气可在飞行控制中关闭。标准画质适合集成显卡。\n本模拟器的推进和补气参数均为工程假设，并非 Tesla 官方规格。')})}]}];
+ Menu.setApplicationMenu(Menu.buildFromTemplate(template));
+}
 function createWindow(){
  const area=screen.getPrimaryDisplay().workAreaSize;
  win=new BrowserWindow({width:Math.min(1440,area.width),height:Math.min(900,area.height),minWidth:Math.min(1024,area.width),minHeight:Math.min(680,area.height),title:'Roadster Flight Lab',backgroundColor:'#b9cbd4',show:false,icon:path.join(__dirname,'..','build-assets','icon.png'),webPreferences:{nodeIntegration:false,contextIsolation:true,sandbox:true,webSecurity:true,spellcheck:false,backgroundThrottling:false,preload:path.join(__dirname,'preload.cjs'),additionalArguments:auditFile?['--roadster-audit-enabled']:[]}});
@@ -49,10 +63,9 @@ function createWindow(){
  if(auditFile)win.webContents.on('console-message',details=>appendAudit({event:'renderer-console',at:Date.now(),level:details.level,message:details.message,sourceId:details.sourceId,lineNumber:details.lineNumber}));
  win.webContents.setWindowOpenHandler(()=>({action:'deny'}));
  win.webContents.on('will-navigate',(e,url)=>{const target=new URL(url);if(target.protocol!=='roadster:'||target.hostname!=='app')e.preventDefault();});
- win.webContents.on('render-process-gone',(_e,details)=>{if(details.reason!=='clean-exit')dialog.showErrorBox('场景停止运行','请关闭应用后重新打开。原因：'+details.reason);});
+ win.webContents.on('render-process-gone',(_e,details)=>{if(details.reason!=='clean-exit')dialog.showErrorBox(nativeText('场景停止运行'),nativeText('请关闭应用后重新打开。原因：')+details.reason);});
  win.loadURL(ORIGIN+'/'+(auditFile?'?native-audit=1&audit-mode='+encodeURIComponent(auditMode)+(auditMode==='garage-view'?'':'&fixed-render=1920x1080')+(auditMode==='profile-before'?'&render-baseline=1':''):''));
- const template=[...(process.platform==='darwin'?[{label:app.name,submenu:[{role:'about'},{type:'separator'},{role:'hide'},{role:'hideOthers'},{type:'separator'},{role:'quit'}]}]:[]),{label:'游戏',submenu:[{label:'重新载入场景',accelerator:'CmdOrCtrl+Shift+R',click:()=>{if(win&&!win.isDestroyed())win.webContents.reload();}},{role:'togglefullscreen',label:'全屏'},{type:'separator'},process.platform==='darwin'?{role:'close',label:'关闭窗口'}:{role:'quit',label:'退出'}]},{label:'帮助',submenu:[{label:'操作与版本',click:()=>dialog.showMessageBox(win,{type:'info',title:app.name,message:'Roadster Flight Lab '+app.getVersion(),detail:'WASD 驾驶 · Esc 车库 · Model 3：L 车灯 / T 驾驶模式 · Roadster：Shift 后喷 · J/K 升降 · 方向键翻滚 · H 悬浮 · T 模式 · R 重置 · C 相机。\n始终自动补气可在飞行控制中关闭。标准画质适合集成显卡。\n本模拟器的推进和补气参数均为工程假设，并非 Tesla 官方规格。'})}]}];
- Menu.setApplicationMenu(Menu.buildFromTemplate(template));
+ updateMenu();
 }
 if(!app.requestSingleInstanceLock())app.quit();else{
  app.on('second-instance',()=>{if(win&&!win.isDestroyed()){if(win.isMinimized())win.restore();win.focus();}});

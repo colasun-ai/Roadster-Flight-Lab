@@ -1,3 +1,4 @@
+import {localizedMarkup, t as uiText} from '../i18n/index.js';
 import {at} from './RoadNetwork.js';
 import {roadPin,routeSections,sectionPoints} from './PointNavigation.js';
 
@@ -7,7 +8,7 @@ export class CityMap{
   this.net=network;this.select=select;
   const el=this.el=document.createElement('dialog');
   el.className='city-map';el.setAttribute('aria-labelledby','city-map-title');
-  el.innerHTML='<header><div><small>FSD 城市</small><h2 id="city-map-title">导航地图</h2></div><button aria-label="关闭地图" data-action="close">关闭</button></header><div class="map-stage"><canvas aria-label="城市实时地图，点击任意位置设置目的地"></canvas><div class="map-tools"><button aria-label="放大地图" data-action="in">＋</button><button aria-label="缩小地图" data-action="out">−</button><button data-action="fit">全图</button><button data-action="locate">定位</button></div></div><div class="map-footer"><div><strong data-name></strong><small data-hint>点击设定终点 · 滚轮缩放 · 拖动平移</small></div><button data-action="drive">开始导航</button></div>';
+  el.innerHTML=localizedMarkup('<header><div><small>FSD 城市</small><h2 id="city-map-title">导航地图</h2></div><button aria-label="关闭地图" data-action="close">关闭</button></header><div class="map-stage"><canvas aria-label="城市实时地图，点击任意位置设置目的地"></canvas><div class="map-tools"><button aria-label="放大地图" data-action="in">＋</button><button aria-label="缩小地图" data-action="out">−</button><button data-action="fit">全图</button><button data-action="locate">定位</button></div></div><div class="map-footer"><div><strong data-name></strong><small data-hint>点击设定终点 · 滚轮缩放 · 拖动平移</small></div><button data-action="drive">开始导航</button></div>');
   document.body.append(el);this.canvas=el.querySelector('canvas');this.ctx=this.canvas.getContext('2d');
   const xs=network.nodes.map(n=>n.x),zs=network.nodes.map(n=>n.z);
   this.bounds={x:(Math.min(...xs)+Math.max(...xs))/2,z:(Math.min(...zs)+Math.max(...zs))/2,
@@ -62,7 +63,7 @@ export class CityMap{
   }
   for(const [name,x,z] of [['中央城区',1000,628],['滨河辅路',1190,925],['环城高速',1040,1018],['环城隧道',1549,1400],['北环',1200,1730],['中城',3160,800],['东港快速路',5280,2000],['南环',3530,-480],['北港',3150,3130]]){
    if(this.factor<.22&&['滨河辅路','环城隧道','北环'].includes(name))continue;
-   const [u,v]=this.screen({x,z});c.font='600 12px system-ui';c.textAlign='center';c.lineWidth=3;c.strokeStyle='#eaf0e9';c.strokeText(name,u,v);c.fillStyle='#4d625b';c.fillText(name,u,v);
+   const [u,v]=this.screen({x,z});c.font='600 12px system-ui';c.textAlign='center';c.lineWidth=3;c.strokeStyle='#eaf0e9';c.strokeText(uiText(name),u,v);c.fillStyle='#4d625b';c.fillText(uiText(name),u,v);
   }
   const pilot=this.pilot;if(!pilot)return;
   const pin=pilot.pin,route=pilot.route;
@@ -74,7 +75,7 @@ export class CityMap{
   if(end){if(pin&&pin.offset>2){line([pin.requested,pin],'#a94e3d',1.7,[3,4]);dot(pin.requested,'#fff',3.5,'#a94e3d');}
    dot(end,'#c44f42',5,'white');}
   if(this.ego){const [x,y]=this.screen(this.ego);c.save();c.translate(x,y);c.rotate(this.ego.yaw);c.beginPath();c.moveTo(0,-9);c.lineTo(6,6);c.lineTo(0,3);c.lineTo(-6,6);c.closePath();c.fillStyle='#176acf';c.fill();c.strokeStyle='white';c.lineWidth=2;c.stroke();c.restore();}
-  this.el.querySelector('[data-name]').textContent=pin?(pin.offset>2?'已选停车点 · 距落点 '+Math.round(pin.offset)+' 米':'已选道路停车点'):'点击地图选择目的地';
-  this.el.querySelector('[data-action=drive]').textContent=pilot.enabled?'返回驾驶':'开始导航';
+  this.el.querySelector('[data-name]').textContent=uiText(pin?(pin.offset>2?'已选停车点 · 距落点 '+Math.round(pin.offset)+' 米':'已选道路停车点'):'点击地图选择目的地');
+  this.el.querySelector('[data-action=drive]').textContent=uiText(pilot.enabled?'返回驾驶':'开始导航');
  }
 }
