@@ -1,10 +1,10 @@
 # Roadster Flight Lab
 
-[English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · **Français** · [Español](README.es.md)
+[English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · **Français** · [Español](README.es.md) · [Português (Brasil)](README.pt-BR.md)
 
 **Trois voitures sur un même terrain d’essai. Franchissez un tremplin avec les propulseurs du Roadster, testez la suspension de la Model 3 en virage relevé, puis observez comment le planificateur embarqué du Model Y choisit sa trajectoire en ville.**
 
-[Télécharger pour Windows x64](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.0/Roadster-Flight-Lab-0.10.0-Windows-x64.exe) · [Télécharger pour Apple Silicon](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.0/Roadster-Flight-Lab-0.10.0-Mac-arm64.zip) · [notes de version et sommes de contrôle](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.0)
+[Télécharger pour Windows x64](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x64.exe) · [Télécharger pour Apple Silicon](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-arm64.zip) · [notes de version et sommes de contrôle](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.1)
 
 ![Tesla Garage avec la Model 3 Performance 2018 exposée](docs/images/garage.jpg)
 

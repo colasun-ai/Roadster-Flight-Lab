@@ -48,7 +48,7 @@ function nativeText(text) {
 }
 ipcMain.on('roadster-language',(event,code)=>{
  if(!win || event.sender!==win.webContents || !event.senderFrame?.url.startsWith('roadster://app/')) return;
- if(!['en','zh-CN','zh-TW','ja','ko','de','fr','es'].includes(code) || code===language) return;
+ if(!['en','zh-CN','zh-TW','ja','ko','de','fr','es','pt-BR'].includes(code) || code===language) return;
  language=code;updateMenu();
 });
 function updateMenu(){

@@ -1,10 +1,10 @@
 # Roadster Flight Lab
 
-[English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · **한국어** · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md)
+[English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · **한국어** · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md) · [Português (Brasil)](README.pt-BR.md)
 
 **하나의 시험장에서 세 대를 비교해 보세요. Roadster로 제트 점프를 하고, Model 3로 경사진 코너에서 서스펜션 반응을 느껴 보세요. Model Y에서는 내장 주행 모델이 도심에서 어떤 경로를 고르는지 볼 수 있습니다.**
 
-[Windows x64용 다운로드](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.0/Roadster-Flight-Lab-0.10.0-Windows-x64.exe) · [Apple Silicon용 다운로드](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.0/Roadster-Flight-Lab-0.10.0-Mac-arm64.zip) · [릴리스 노트 및 체크섬](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.0)
+[Windows x64용 다운로드](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x64.exe) · [Apple Silicon용 다운로드](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-arm64.zip) · [릴리스 노트 및 체크섬](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.1)
 
 ![2018년 모델 3 퍼포먼스가 전시된 Tesla Garage](docs/images/garage.jpg)
 

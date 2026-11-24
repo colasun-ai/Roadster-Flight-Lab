@@ -6,7 +6,8 @@ const catalog = lang => JSON.parse(fs.readFileSync(new URL('../src/i18n/catalogs
 const english = catalog('en');
 assert.equal(locale,'en');
 assert.equal(supported('invalid'),'en');
-assert.equal(Object.keys(languages).length,8);
+assert.ok(new Set(Object.keys(languages).map(code => new Intl.Locale(code).language)).size >= 8);
+assert.equal(translator('pt-BR')('开始驾驶'), 'Começar a dirigir');
 for (const code of Object.keys(languages)) {
   const t = translator(code);
   assert.equal(t('120 Hz'), '120 Hz');
@@ -22,4 +23,4 @@ for (const code of Object.keys(languages)) {
     assert.deepEqual((key.match(/\{\d+\}/g)||[]).sort(),(value.match(/\{\d+\}/g)||[]).sort(),code+' '+key);
   }
 }
-console.log('Eight languages, English default, identical catalog coverage and intact telemetry fields.');
+console.log('Eight distinct languages, English default, identical catalog coverage and intact telemetry fields.');

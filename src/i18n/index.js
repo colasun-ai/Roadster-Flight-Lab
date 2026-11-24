@@ -1,4 +1,5 @@
 import en from './catalogs/en.json' with {type:'json'};
+import ptBR from './catalogs/pt-BR.json' with {type:'json'};
 import es from './catalogs/es.json' with {type:'json'};
 import fr from './catalogs/fr.json' with {type:'json'};
 import de from './catalogs/de.json' with {type:'json'};
@@ -8,9 +9,9 @@ import traditional from './catalogs/zh-TW.json' with {type:'json'};
 
 export const languages = Object.freeze({
   en: 'English', 'zh-CN': '简体中文', 'zh-TW': '繁體中文', ja: '日本語',
-  ko: '한국어', de: 'Deutsch', fr: 'Français', es: 'Español'
+  ko: '한국어', de: 'Deutsch', fr: 'Français', es: 'Español', 'pt-BR': 'Português (Brasil)'
 });
-const catalogs = {en, es, fr, de, ja, ko, 'zh-TW': traditional};
+const catalogs = {'pt-BR': ptBR, en, es, fr, de, ja, ko, 'zh-TW': traditional};
 const storageKey = 'roadster.language';
 export function supported(value) {
   return Object.hasOwn(languages, value) ? value : 'en';

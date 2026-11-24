@@ -1,14 +1,14 @@
 # Roadster Flight Lab
 
-[English](README.md) · **简体中文** · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md)
+[English](README.md) · **简体中文** · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md) · [Português (Brasil)](README.pt-BR.md)
 
 **在同一个离线驾驶模拟器里，把 Roadster 送上飞坡，给 Model 3 做坡起测试，或者坐进 Model Y，观察本地模型怎样在城市里选择车道。**
 
-[下载 Windows x64 便携版](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.0/Roadster-Flight-Lab-0.10.0-Windows-x64.exe) · [下载 Apple Silicon Mac 版](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.0/Roadster-Flight-Lab-0.10.0-Mac-arm64.zip) · [所有发布文件与校验值](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.0)
+[下载 Windows x64 便携版](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x64.exe) · [下载 Apple Silicon Mac 版](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-arm64.zip) · [所有发布文件与校验值](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.1)
 
 ![Tesla Garage 中可环绕查看的 Model 3 Performance](docs/images/garage.jpg)
 
-**界面语言**　首次启动使用英语。在 Tesla Garage 左侧的 Language 下拉框中选择简体中文，应用会重新打开车库并记住选择。八种语言都可离线使用。
+**界面语言**　首次启动使用英语。在 Tesla Garage 左侧的 Language 下拉框中选择简体中文，应用会重新打开车库并记住选择。8 种语言均可离线使用，中文提供简体和繁体。
 
 ## 第一次上车
 
