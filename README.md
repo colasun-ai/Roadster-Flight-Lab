@@ -86,3 +86,9 @@ node tests/slope-park.test.js
 ## 素材署名
 
 感谢 asiphy007、Ameer Studio、BloxBloger、vecarz / heynic、Peixin、Poly Haven 和 Plan-R1 作者。各素材沿用各自条款，其中 **Model Y 素材为 CC BY-NC 4.0，仅限非商业使用**。仓库收录上游原始权重，并保留其许可说明的边界。[完整署名、原作链接与修改记录](CREDITS.md)
+
+原车轮处理也可独立复现。使用 Python 3.12、NumPy 2.3.5、SciPy 1.18.1 和 manifold3d 3.5.4，运行下列命令会生成一份新文件。
+
+```sh
+python scripts/roadster-mesh-process.py --input "assets/originals/tesla roadtser 2026.glb" --output rebuilt/roadster.glb --report rebuilt/wheels.json
+```
