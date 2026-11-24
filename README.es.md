@@ -18,7 +18,7 @@ Elija Roadster en Tesla Garage, seleccione Comenzar a conducir, luego abra el es
 
 | Vehículo | Qué probar |
 | --- | --- |
-| Tesla Roadster | Utiliza diez boquillas de gas frío para impulsarte, flotar, rodar y aterrizar. Cambia entre vuelo estabilizado, manual y caos. Un compresor a bordo rellena continuamente los tanques. |
+| Tesla Roadster | Diez propulsores de gas frío permiten acelerar, mantenerse en vuelo estacionario, controlar el alabeo y aterrizar. Hay tres modos de vuelo. Un compresor repone continuamente el gas de los depósitos. |
 | 2018 Model 3 Performance | Compara los modos Estándar, Rendimiento y Pista. El modelo AWD de doble motor combina frenado regenerativo y de fricción. La referencia de 450 CV procede de una prueba de carretera de época. |
 | 2026 Model Y Performance | Conduce el SUV de alto rendimiento del mercado estadounidense con su propia entrega de potencia, chasis y amortiguación. Tome la misma esquina o colina que el Model 3 para comparar el movimiento del cuerpo. |
 
@@ -30,7 +30,7 @@ El parque de pistas tiene cuatro áreas: inicios de colinas con pendientes de 8 
 
 ## Sigue a un planificador local por la ciudad.
 
-Elige un destino en el mapa y activa FSD. La red de carreteras de 61,43 km incluye autopistas, vías de servicio, rampas, túneles y conexiones en U. Plan-R1 predice dieciséis poses que abarcan ocho segundos. El controlador sigue la trayectoria seleccionada y aplica salvaguardas de tráfico y frenado. La cinta azul muestra la parte más cercana del plano. Toma el control en cualquier momento con WASD o la barra espaciadora.
+Elige un destino en el mapa y activa FSD. La red de 61,43 km incluye autopistas, vías de servicio, ramales, túneles y cambios de sentido. Plan-R1 predice dieciséis posiciones y orientaciones para los próximos ocho segundos. El controlador sigue la trayectoria elegida y ajusta la frenada según el tráfico. La franja azul muestra el tramo inmediato por delante del coche. Puedes retomar el control con WASD o la barra espaciadora.
 
 ![Giro en ciudad con el camino previsto visible delante del vehículo](docs/images/city.jpg)
 

@@ -1,0 +1,28 @@
+{
+  "commit": "4c0bd22a9fa3763abf782ad81b1115189853b3e3",
+  "files": {
+    "src/physics/PhysicsWorld.js": "8d9f9af674cf93006050f83073c6e7ef578e5bbecc412d500654f87cf84992d0",
+    "src/physics/math.js": "ef4dfd4f9a750152246107f307aaaf1066efaba2fee9f6dbe3feac514030b2d5",
+    "src/thrusters/FlightStabilizer.js": "19063ca49d2d8db83230f89d35c6e103f42299f9ea77c6f03ac4ac8cce53a14f",
+    "src/thrusters/ThrusterAllocation.js": "38632a4b37eb1335adae29bfe3163e8c977b4c727797ee9bb857ea79bd7c9e2d",
+    "src/thrusters/ThrusterConfig.js": "509fd4985df2adca51596b3607b92d9048f66132681da8ba612e1318aea8c7c4",
+    "src/thrusters/ThrusterEffects.js": "0503eeaffc27a343e02f1ba6d2c681b1b7c92e3f8c00c5c39e06434946a10c16",
+    "src/thrusters/ThrusterFuel.js": "9e975b4f1cf2dc9f8844ad4063f55967a4a820ed30464ba00ea8382898ff264e",
+    "src/thrusters/ThrusterSystem.js": "7633d6718ed6fbfde21e8cb731ce83178bf32ff7de38c149b109798fd6422794",
+    "src/vehicle/LaunchTimer.js": "40814ee3291fccf8de2b86647c871c7492fea9b43ac246fb2e14d5d3679704cc",
+    "src/vehicle/ThrusterController.js": "fb54a034e0f875d1557a4e2a132e7a3672a96ec30c70597c849fcfd4ae524cc9",
+    "src/vehicle/VehicleConfig.js": "e980922fc5f984aae4f9752a449e1326a5552679e27427381dcfb795314faaae",
+    "src/vehicle/VehicleForceInterface.js": "75b3e60a4fd3f247a50e3f513a28c6056857e5def5f7b88e40fb41224db8819c",
+    "src/vehicle/VehiclePhysics.js": "6ed34e75875ca67d56afabda7334abd68cead9b96f1004df476ccfdb2af233c9",
+    "src/vehicles/VehicleFactory.js": "afed9c38c84d7acff24847a5671175b5a9214f6a51ee223dedb3bfc056c46573",
+    "src/vehicles/VehicleRegistry.js": "2bb677535aded0c275a4e2db5bc4f50b454dc092ca6e798b6d53876acab8acc3",
+    "src/vehicles/VehicleSwitcher.js": "9a01e669deec6d34ec8650c939b10c19f0f02bf9c6af5b7d8ab1267d0a52175d",
+    "src/vehicles/model3/AccelerationMetrics.js": "83be2b05453d562b9e4faf616aba7387a8504de02b9bff6dcc650fffb0eae577",
+    "src/vehicles/model3/Model3Config.js": "a897202d4f2e6a5822059e296676cb6cbf94caeeeca038fcadf53ee0d2f05536",
+    "src/vehicles/model3/Model3Physics.js": "65830daa35bad668f5bc1f1d37c3ddef5badb2ab34ad285382e4eee4382f2623",
+    "src/vehicles/model3/Model3Powertrain.js": "e8d1f318ede791ada00422a40fd3a1cdf29bf5d67027dfc83a8ade8f09225d7c",
+    "src/vehicles/model3/Model3Visual.js": "35d6cfb90fecc66768b6a9a3088e0dbc3d5648ea4b1540f297447a64458083cb",
+    "src/vehicles/modely/ModelYConfig.js": "df6e378a5d3b0c1ebfd59e0ecebadcfccd3bfba2fa0bd6c6830d013eb9b69524",
+    "src/vehicles/modely/ModelYPhysics.js": "ca4eeddb2025b351b7e7598dae37096c13736df85da05e7d263d9bf5f04a0bdd"
+  }
+}

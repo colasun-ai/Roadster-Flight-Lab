@@ -9,3 +9,7 @@
 *.jpg binary
 *.icns binary
 *.ico binary
+/src/vehicle/** text eol=lf
+/src/thrusters/** text eol=lf
+/src/physics/** text eol=lf
+/src/vehicles/** text eol=lf

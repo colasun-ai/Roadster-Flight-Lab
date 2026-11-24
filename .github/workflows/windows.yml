@@ -31,6 +31,8 @@ jobs:
           New-Item -Type Directory -Force desktop-build
           gh release download $env:TAG --pattern '*-Windows-x64.exe' --dir desktop-build
       - name: Build the complete offline executable
+        env:
+          ELECTRON_BUILDER_COMPRESSION_LEVEL: 3
         if: inputs.release == ''
         run: |
           npm ci

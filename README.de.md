@@ -18,7 +18,7 @@ Wählen Sie „Roadster“ in der Tesla-Garage, wählen Sie „Fahren starten“
 
 | Fahrzeug | Was Sie ausprobieren sollten |
 | --- | --- |
-| Tesla Roadster | Verwenden Sie zehn Kaltgasdüsen zum Steigern, Schweben, Rollen und Landen. Wechseln Sie zwischen stabilisiertem, manuellem und Chaosflug. Ein Bordkompressor füllt die Tanks kontinuierlich auf. |
+| Tesla Roadster | Der Roadster nutzt zehn Kaltgasdüsen zum Beschleunigen, Schweben und Steuern in der Luft. Drei Flugmodi verändern die Stabilisierung. Ein Kompressor füllt die Druckbehälter während der Fahrt nach. |
 | 2018 Model 3 Performance | Vergleichen Sie die Modi „Standard“, „Leistung“ und „Track“. Das AWD-Modell mit zwei Motoren kombiniert regeneratives und Reibungsbremsen. Die 450-PS-Referenz stammt aus einem historischen Straßentest. |
 | 2026 Model Y Performance | Fahren Sie das Performance-SUV auf dem US-Markt mit eigener Leistungsentfaltung, eigenem Fahrwerk und eigener Dämpfung. Nehmen Sie die gleiche Ecke oder den gleichen Hügel wie das Model 3, um die Körperbewegungen zu vergleichen. |
 
@@ -30,7 +30,7 @@ Der Pistenpark besteht aus vier Bereichen: Hügelstarts mit 8–45 % Steigung, K
 
 ## Folgen Sie einem lokalen Planer durch die Stadt
 
-Wählen Sie ein Ziel auf der Karte und aktivieren Sie FSD. Das 61,43 km lange Straßennetz umfasst Schnellstraßen, Nebenstraßen, Rampen, Tunnel und Kehrtwendeverbindungen. Plan-R1 sagt sechzehn Posen über einen Zeitraum von acht Sekunden voraus. Der Controller folgt der ausgewählten Trajektorie und wendet Verkehrs- und Bremsschutzmaßnahmen an. Das blaue Band zeigt den näheren Teil des Plans. Übernehmen Sie jederzeit mit WASD oder der Leertaste.
+Wähle ein Ziel auf der Karte und aktiviere FSD. Das 61,43 km lange Straßennetz umfasst Schnellstraßen, Nebenstraßen, Anschlussrampen, Tunnel und Wendemöglichkeiten. Plan-R1 berechnet 16 zukünftige Fahrzeugpositionen mit Ausrichtung für die nächsten acht Sekunden. Die Regelung folgt der gewählten Bahn und berücksichtigt Verkehr und Bremsweg. Das blaue Band zeigt den Abschnitt direkt vor dem Auto. Mit WASD oder der Leertaste übernimmst du das Steuer.
 
 ![Eine Stadtkurve mit dem geplanten Weg, der vor dem Fahrzeug sichtbar ist](docs/images/city.jpg)
 

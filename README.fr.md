@@ -18,7 +18,7 @@ Choisissez Roadster dans le garage Tesla, sélectionnez Commencer à conduire, p
 
 | Véhicule | Que essayer |
 | --- | --- |
-| Tesla Roadster | Utilisez dix buses à gaz froid pour booster, planer, rouler et atterrir. Basculez entre le vol stabilisé, manuel et chaotique. Un compresseur embarqué remplit en permanence les réservoirs. |
+| Tesla Roadster | Dix propulseurs à gaz froid permettent d’accélérer, de maintenir le vol stationnaire et de contrôler le roulis et l’atterrissage. Trois modes de vol modifient la stabilisation. Un compresseur recharge les réservoirs de gaz en continu. |
 | 2018 Model 3 Performance | Comparez les modes Standard, Performance et Track. Le modèle AWD à double moteur allie freinage par récupération et freinage par friction. La référence de 450 ch est issue d'un essai routier d'époque. |
 | 2026 Model Y Performance | Conduisez le SUV performant du marché américain avec sa propre puissance, son châssis et son amortissement. Prenez le même virage ou la même colline que le modèle 3 pour comparer les mouvements du corps. |
 
@@ -30,7 +30,7 @@ Le parc de pistes comprend quatre zones : des départs de côtes sur des pentes
 
 ## Suivez un planificateur local à travers la ville
 
-Choisissez une destination sur la carte et engagez FSD. Le réseau routier de 61,43 km comprend des autoroutes, des voies de service, des rampes, des tunnels et des liaisons avec demi-tour. Plan-R1 prédit seize poses s'étalant sur huit secondes. Le contrôleur suit la trajectoire sélectionnée et applique des mesures de sécurité en matière de circulation et de freinage. Le ruban bleu montre la partie la plus proche du plan. Prenez le relais à tout moment avec WASD ou la barre d'espace.
+Choisissez une destination sur la carte et activez FSD. Le réseau de 61,43 km comprend voies rapides, contre-allées, bretelles, tunnels et zones de demi-tour. Plan-R1 prévoit seize positions et orientations sur huit secondes. Le contrôleur suit la trajectoire retenue et ajuste le freinage en fonction du trafic. Le ruban bleu en montre la partie la plus proche du véhicule. Les touches WASD ou la barre d’espace permettent de reprendre la main.
 
 ![Un virage en ville avec le tracé prévu visible devant le véhicule](docs/images/city.jpg)
 

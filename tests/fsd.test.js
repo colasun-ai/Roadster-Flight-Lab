@@ -61,5 +61,17 @@ await test('An oncoming car in its own lane does not trigger a stopped-car escap
  for(let i=0;i<60;i++){pilot.time=i/10;assert.equal(recovery.control(pilot,ego,vehicle,traffic,null,near,0),null);}
  assert.equal(recovery.committed,false);
 });
-await test('All hero physics sources are identical to preserved v0.7',async()=>{const{execFileSync}=await import('node:child_process');const files=execFileSync('git',['ls-files','src/vehicle','src/thrusters','src/physics','src/vehicles'],{encoding:'utf8'}).trim().split('\n');for(const file of files){const baseline=execFileSync('git',['show','4c0bd22:'+file]);assert.ok(baseline.equals(await fs.readFile(file)),file);}});
+await test('All hero physics sources are identical to preserved v0.7',async()=>{
+ const {createHash}=await import('node:crypto');
+ const {files}=JSON.parse(await fs.readFile(new URL('./fixtures/vehicle-v07-hashes.json',import.meta.url),'utf8'));
+ const actual=[];
+ for(const dir of ['src/vehicle','src/thrusters','src/physics','src/vehicles']){
+  for(const name of await fs.readdir(dir,{recursive:true})){
+   const file=dir+'/'+name.replaceAll('\\','/');
+   if((await fs.stat(file)).isFile()) actual.push(file);
+  }
+ }
+ assert.deepEqual(actual.sort(),Object.keys(files).sort());
+ for(const file of actual) assert.equal(createHash('sha256').update(await fs.readFile(file)).digest('hex'),files[file],file);
+});
 await fs.writeFile('reports/fsd/fsd-unit-results.json',JSON.stringify({passed:true,records},null,2));
