@@ -34,6 +34,11 @@ const scene=new THREE.Scene();scene.fog=new THREE.Fog(0xb9cbd4,130,410);
 const camera=new THREE.PerspectiveCamera(48,innerWidth/innerHeight,.1,6000);scene.add(new THREE.HemisphereLight(0xe6f3ff,0x595b56,1.3));
 const sun=new THREE.DirectionalLight(0xffefda,2.6);sun.position.set(-30,55,25);sun.castShadow=true;sun.shadow.mapSize.set(1024,1024);Object.assign(sun.shadow.camera,{left:-12,right:12,top:12,bottom:-12,near:1,far:100});sun.shadow.bias=-.0002;scene.add(sun);scene.add(sun.target);
 const rendering=new RenderingSystem(renderer,scene,camera,sun);
+const drivingOnly = window.planR1?.available === false;
+if (drivingOnly) {
+  rendering.setQuality('low');
+  $('quality').value='low';
+}
 const {world,track}=await createWorld();const cameraObstruction=new CameraObstruction(world);const baseColliderCount=world.colliders.len();
 let vehicle,thrusters,launchTimer,root,nodes,effects,jetHUD,model3Visual,performanceMetrics,previous,current,modelLoadMs=0,garageOpen=true;
 let modelMetadata,fsd=null;
@@ -331,7 +336,7 @@ $('profile-suite').onclick=()=>{if(profileSuite?.running||switcher.busy)return;p
 $('profile-export').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify({date:new Date().toISOString(),profiles:profiler.results},null,2)],{type:'application/json'}));a.download='frame-profiles.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
 if(!window.roadsterAudit){if(['low','medium','high'].includes(preferences.quality)){$('quality').value=preferences.quality;rendering.setQuality(preferences.quality);}for(const [id,key,min,max]of [['camera-distance','distance',6,24],['camera-smoothing','smoothing',1,10],['camera-fov','fov',0,1.5]])if(Number.isFinite(preferences[key]))$(id).value=Math.max(min,Math.min(max,preferences[key]));if(typeof preferences.horizon==='boolean')$('horizon').checked=preferences.horizon;if(typeof preferences.pbr==='boolean')$('pbr-rendering').checked=preferences.pbr;if(['0','.5','1'].includes(preferences.effects))$('effects').value=preferences.effects;rig.distance=Number($('camera-distance').value);rig.smoothing=Number($('camera-smoothing').value);rig.speedFov=Number($('camera-fov').value);rig.horizonLock=$('horizon').checked;rendering.setEnhanced($('pbr-rendering').checked);resize();}
 for(const id of ['quality','horizon','camera-distance','camera-smoothing','camera-fov','effects','pbr-rendering'])$(id).addEventListener('change',savePreferences);
-if(window.planR1?.available === false){
+if(drivingOnly){
   const notice=document.createElement('small');
   notice.id='driving-edition';
   notice.textContent=uiText('32 位驾驶版 · 包含试车场和喷气飞行，城市自动驾驶需要 64 位完整版。');
@@ -349,7 +354,7 @@ if(window.roadsterAudit&&new URLSearchParams(location.search).has('native-audit'
  const nativeMode=new URLSearchParams(location.search).get('audit-mode');
  if(nativeMode==='driving-edition'){
   const {auditDrivingEdition}=await import('./diagnostics/DrivingEditionAudit.js');
-  try{await auditDrivingEdition(switcher,()=>thrusters);}
+  try{await auditDrivingEdition(switcher,()=>thrusters,()=>({paused,errors:errors.slice(-3),input:input.telemetry()}));}
   catch(error){window.roadsterAudit.report({event:'driving-edition-complete',passed:false,error:String(error.stack??error)});}
  }
  else if(nativeMode==='slope-park'){

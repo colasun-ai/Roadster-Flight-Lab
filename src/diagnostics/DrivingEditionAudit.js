@@ -1,5 +1,5 @@
 // Packaged Windows x86 check. Exercise the visible controls and the normal physics loop.
-export async function auditDrivingEdition(switcher, getThrusters) {
+export async function auditDrivingEdition(switcher, getThrusters, diagnostics) {
   const el = id => document.getElementById(id);
   const frame = () => new Promise(requestAnimationFrame);
   function check(condition, message) {
@@ -33,16 +33,22 @@ export async function auditDrivingEdition(switcher, getThrusters) {
       dialog.querySelector('.slope-drive').click();
       check(!dialog.open, 'D5 selection failed');
     }
+    await frame();
+    await frame();
+    const initialSteps = vehicle.steps;
     const start = vehicle.rootPose().p;
     const initialZ = start.z;
     key('keydown', 'KeyW', 'w');
     if (jet) key('keydown', 'ShiftLeft', 'Shift');
     try {
       await until(() => vehicle.forwardSpeed() > 3 && Math.abs(vehicle.rootPose().p.z - initialZ) > 2 &&
-        (!jet || jet.fuel.consumed > 0), 'Driving input failed: ' + id);
+        (!jet || jet.fuel.consumed > 0), 'Driving input failed: ' + id, 85000);
       if (id === 'roadster') check(jet?.thrustNewtons > 0, 'Jet thrust missing');
       runs.push({id, speedKmh: vehicle.forwardSpeed() * 3.6, distanceZ: vehicle.rootPose().p.z - initialZ,
         ...(jet ? {course: 'D5', thrustN: jet.thrustNewtons, gasUsedKg: jet.fuel.consumed} : {})});
+    } catch (error) {
+      throw Error(error.message + ' ' + JSON.stringify({speed:vehicle.forwardSpeed(), start:initialZ,
+        position:vehicle.rootPose().p, steps:vehicle.steps-initialSteps, ...diagnostics()}));
     } finally {
       if (jet) key('keyup', 'ShiftLeft', 'Shift');
       key('keyup', 'KeyW', 'w');
