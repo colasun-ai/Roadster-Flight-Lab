@@ -21,4 +21,8 @@ class Planner{
  }
  stop(){this.child?.kill();this.child=null;this.ready=false;this.startPromise=null;}
 }
-module.exports={Planner};
+function developmentRuntime(root, platform=process.platform, arch=process.arch) {
+ if(platform==='darwin' && arch==='x64') return path.join(root,'desktop-build','runtime-mac-x64');
+ return path.join(root,platform==='win32'?'fsd-runtime-win':'fsd-runtime');
+}
+module.exports={Planner,developmentRuntime};

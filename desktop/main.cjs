@@ -36,9 +36,9 @@ async function serve(request){
   const bytes=await fs.readFile(file);return new Response(request.method==='HEAD'?null:bytes,{headers:{'Content-Type':types[path.extname(file)]||'application/octet-stream','Content-Security-Policy':CSP,'X-Content-Type-Options':'nosniff'}});
  }catch{return new Response('Not found',{status:404});}
 }
-const {Planner}=require('./plan-r1.cjs');
+const {Planner,developmentRuntime}=require('./plan-r1.cjs');
 const drivingOnly=process.platform==='win32'&&process.arch==='ia32';
-const planner=drivingOnly?null:new Planner(app.isPackaged?path.join(process.resourcesPath,'fsd-runtime'):path.join(__dirname,'..',process.platform==='win32'?'fsd-runtime-win':'fsd-runtime'));
+const planner=drivingOnly?null:new Planner(app.isPackaged?path.join(process.resourcesPath,'fsd-runtime'):developmentRuntime(path.resolve(__dirname,'..')));
 if(planner)ipcMain.handle('plan-r1-predict',(event,state)=>{if(!win||event.sender!==win.webContents||!event.senderFrame?.url.startsWith('roadster://app/'))throw Error('Untrusted planner request');return planner.predict(state);});
 app.on('before-quit',()=>planner?.stop());
 let win;
