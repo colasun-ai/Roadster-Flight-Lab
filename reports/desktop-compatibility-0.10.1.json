@@ -15,7 +15,13 @@
       "macosNotarization": false,
       "testOutput": "Passed 9 garage and city checks"
     },
-    "limits": "No physical Intel GPU measurement. The hosted Intel macOS machine could not create a WebGL context. The first hosted Rosetta garage run exceeded its cold Model 3 load time budget."
+    "hostedRosettaRetest": {
+      "commit": "dd216cd47639061f0e6522a6ff1885ea18697534",
+      "job": "https://github.com/colasun-ai/Roadster-Flight-Lab/actions/runs/45605616162/job/139180239662",
+      "testOutput": "Passed 9 garage and city checks",
+      "scope": "Separate verification build with a longer timeout for cold vehicle loads. The local GUI result above covers the distributed ZIP."
+    },
+    "limits": "No physical Intel GPU measurement. The hosted Intel macOS machine could not create a WebGL context."
   },
   "windows32Driving": {
     "file": "Roadster-Flight-Lab-0.10.1-Windows-x86-Driving.exe",
