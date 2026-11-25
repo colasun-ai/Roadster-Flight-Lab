@@ -1,0 +1,56 @@
+name: Windows x86 driving edition
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  driving:
+    runs-on: windows-2022
+    timeout-minutes: 25
+    env:
+      ELECTRON_BUILDER_COMPRESSION_LEVEL: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build the 32-bit portable driving edition
+        shell: bash
+        run: |
+          npm ci
+          node tests/languages.test.js
+          npm run pack:win32
+      - name: Check the inner executable and drive all three cars
+        run: |
+          $exe = (Get-ChildItem desktop-build/*-Windows-x86-Driving.exe).FullName
+          7z e -y $exe '$PLUGINSDIR/app-32.7z' '-overify'
+          if ($LASTEXITCODE) { throw 'Missing 32-bit payload' }
+          7z x -y verify/app-32.7z '-overify/game' | Select-Object -Last 6
+          if ($LASTEXITCODE) { throw 'Cannot extract payload' }
+          $payload = [IO.File]::ReadAllBytes((Resolve-Path 'verify/game/Roadster Flight Lab.exe'))
+          $machine = [BitConverter]::ToUInt16($payload, [BitConverter]::ToInt32($payload, 60) + 4)
+          if ($machine -ne 0x014c -or (Test-Path verify/game/resources/fsd-runtime)) { throw 'Unexpected architecture or planner' }
+          $log = Join-Path $env:RUNNER_TEMP 'roadster-x86.jsonl'
+          $p = Start-Process $exe -ArgumentList "--audit-output=$log","--audit-mode=driving-edition","--use-angle=swiftshader","--enable-unsafe-swiftshader" -PassThru
+          try {
+            $until = (Get-Date).AddMinutes(7)
+            while ((Get-Date) -lt $until -and !$p.HasExited) {
+              if (Test-Path $log) {
+                $done = Get-Content -Encoding UTF8 $log | ForEach-Object { try { $_ | ConvertFrom-Json -ErrorAction Stop } catch {} } | Where-Object { $_.sample.event -eq 'driving-edition-complete' } | Select-Object -Last 1
+                if ($done) {
+                  $done.sample | ConvertTo-Json -Depth 5
+                  if (!$done.sample.passed -or $done.arch -ne 'ia32') { throw 'Packaged driving check failed' }
+                  Get-FileHash $exe
+                  exit 0
+                }
+              }
+              Start-Sleep 2
+            }
+            if (Test-Path $log) { Get-Content $log -Tail 5 }
+            throw 'Desktop audit exited or timed out'
+          } finally { if (!$p.HasExited) { taskkill /PID $p.Id /T /F | Out-Null } }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-x86-driving
+          path: desktop-build/*-Windows-x86-Driving.exe
+          compression-level: 0
+          retention-days: 14

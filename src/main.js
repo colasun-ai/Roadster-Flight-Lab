@@ -107,7 +107,7 @@ function frameGarage(){
 async function selectGarage(id){if(fsd?.loading)return;try{await switcher.switchTo(id);paused=true;frameGarage();}catch(error){errors.push({message:error.message});}}
 function openGarage(){if(garageOpen||fsd?.loading||switcher.busy||switchAudit?.running||profileSuite?.running)return;fsd?.parkForGarage();garageOpen=true;
   $('scene-label').textContent='FLIGHT LAB · TESLA GARAGE';
-  $('garage-city').textContent=uiText(fsd?.active?'返回 FSD 城市':'进入 FSD 城市');
+  if(fsd)$('garage-city').textContent=uiText(fsd.active?'返回 FSD 城市':'进入 FSD 城市');
   document.body.classList.add('garage-open');$('garage').hidden=false;input.setEnabled(false);paused=true;scenario=soak=null;if(thrusters){thrusters.hover=false;thrusters.landing=false;thrusters.flightArmed=false;}frameGarage();}
 function startDriving(){if(switcher.busy||!switcher.active)return;garageOpen=false;document.body.classList.remove('garage-open');$('garage').hidden=true;
   $('scene-label').textContent=uiText(fsd?.inView?'FLIGHT LAB · 本地 FSD 城市':'FLIGHT LAB · 实体试车场');
@@ -199,8 +199,8 @@ function updateModel3HUD(t){
  document.querySelectorAll('[data-interaction]').forEach(b=>b.disabled=t.speedKmh>1.8);
 }
 $('garage-open').onclick=openGarage;$('garage-start').onclick=()=>{
- if(switcher.busy||fsd.loading||!switcher.active)return;
- if(fsd.active)fsd.exit();
+ if(switcher.busy||fsd?.loading||!switcher.active)return;
+ if(fsd?.active)fsd.exit();
  startDriving();
 };
 document.querySelectorAll('[data-garage-vehicle]').forEach(b=>b.onclick=()=>{if(!switcher.busy&&b.dataset.garageVehicle!==switcher.active?.id)selectGarage(b.dataset.garageVehicle);});
@@ -331,16 +331,28 @@ $('profile-suite').onclick=()=>{if(profileSuite?.running||switcher.busy)return;p
 $('profile-export').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify({date:new Date().toISOString(),profiles:profiler.results},null,2)],{type:'application/json'}));a.download='frame-profiles.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
 if(!window.roadsterAudit){if(['low','medium','high'].includes(preferences.quality)){$('quality').value=preferences.quality;rendering.setQuality(preferences.quality);}for(const [id,key,min,max]of [['camera-distance','distance',6,24],['camera-smoothing','smoothing',1,10],['camera-fov','fov',0,1.5]])if(Number.isFinite(preferences[key]))$(id).value=Math.max(min,Math.min(max,preferences[key]));if(typeof preferences.horizon==='boolean')$('horizon').checked=preferences.horizon;if(typeof preferences.pbr==='boolean')$('pbr-rendering').checked=preferences.pbr;if(['0','.5','1'].includes(preferences.effects))$('effects').value=preferences.effects;rig.distance=Number($('camera-distance').value);rig.smoothing=Number($('camera-smoothing').value);rig.speedFov=Number($('camera-fov').value);rig.horizonLock=$('horizon').checked;rendering.setEnhanced($('pbr-rendering').checked);resize();}
 for(const id of ['quality','horizon','camera-distance','camera-smoothing','camera-fov','effects','pbr-rendering'])$(id).addEventListener('change',savePreferences);
-fsd=new FSDSystem({scene,world,renderer,camera,sun,rendering,trackScene,getVehicle:()=>vehicle,getThrusters:()=>thrusters,
-  spawn:options=>{vehicle.reset(options);scenario=soak=null;accumulator=0;previous=current=vehicle.rootPose();rig.ready=false;},
-  stopInput:()=>input.clear(),freeCamera:()=>{rig.mode=2;rig.ready=false;$('camera').textContent=uiText('自由视角');},startDriving});
-const garageCity=document.createElement('button');garageCity.id='garage-city';garageCity.className='primary';garageCity.textContent=uiText('进入 FSD 城市');garageCity.onclick=()=>{if(!switcher.busy&&switcher.active)fsd.enter();};$('garage-start').after(garageCity);
+if(window.planR1?.available === false){
+  const notice=document.createElement('small');
+  notice.id='driving-edition';
+  notice.textContent=uiText('32 位驾驶版 · 包含试车场和喷气飞行，城市自动驾驶需要 64 位完整版。');
+  $('garage-start').after(notice);
+}else{
+  fsd=new FSDSystem({scene,world,renderer,camera,sun,rendering,trackScene,getVehicle:()=>vehicle,getThrusters:()=>thrusters,
+    spawn:options=>{vehicle.reset(options);scenario=soak=null;accumulator=0;previous=current=vehicle.rootPose();rig.ready=false;},
+    stopInput:()=>input.clear(),freeCamera:()=>{rig.mode=2;rig.ready=false;$('camera').textContent=uiText('自由视角');},startDriving});
+  const garageCity=document.createElement('button');garageCity.id='garage-city';garageCity.className='primary';garageCity.textContent=uiText('进入 FSD 城市');garageCity.onclick=()=>{if(!switcher.busy&&switcher.active)fsd.enter();};$('garage-start').after(garageCity);
+}
 await switcher.switchTo('roadster');garageOpen=true;document.body.classList.add('garage-open');$('garage').hidden=false;paused=true;frameGarage();$('notice').textContent='';ready=true;perf.startupMs=performance.now()-started;perf.modelLoadMs=modelLoadMs;last=performance.now();scheduleRenderFrame();
 // Opt-in native QA uses the same visible controls and real RAF/120 Hz loop.
 // No accelerated wall clock and no body speed injection.
 if(window.roadsterAudit&&new URLSearchParams(location.search).has('native-audit')){
  const nativeMode=new URLSearchParams(location.search).get('audit-mode');
- if(nativeMode==='slope-park'){
+ if(nativeMode==='driving-edition'){
+  const {auditDrivingEdition}=await import('./diagnostics/DrivingEditionAudit.js');
+  try{await auditDrivingEdition(switcher,()=>thrusters);}
+  catch(error){window.roadsterAudit.report({event:'driving-edition-complete',passed:false,error:String(error.stack??error)});}
+ }
+ else if(nativeMode==='slope-park'){
   const {auditSlopePark}=await import('./diagnostics/SlopeParkAudit.js');
   try{await auditSlopePark(vehicle);}catch(e){window.roadsterAudit.report({event:'slopes-complete',passed:false,error:String(e.stack??e)});}
  }

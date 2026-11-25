@@ -20,7 +20,7 @@ if(auditFile){ipcMain.on('roadster-audit', (event,value)=>{
   win.webContents.capturePage().then(frame=>fs.writeFile(auditFile+'.jpg',frame.toJPEG(88)))
     .catch(error=>appendAudit({event:'capture-error',message:error.message}));
  }
- appendAudit({receivedAt:Date.now(),elapsedWallSeconds:(Date.now()-auditStarted)/1000,version:app.getVersion(),processes:app.getAppMetrics().map(p=>({type:p.type,pid:p.pid,cpu:p.cpu,memory:p.memory})),sample:value});
+ appendAudit({receivedAt:Date.now(),elapsedWallSeconds:(Date.now()-auditStarted)/1000,version:app.getVersion(),arch:process.arch,processes:app.getAppMetrics().map(p=>({type:p.type,pid:p.pid,cpu:p.cpu,memory:p.memory})),sample:value});
 });}
 
 protocol.registerSchemesAsPrivileged([{scheme:'roadster',privileges:{standard:true,secure:true,supportFetchAPI:true,stream:true}}]);
@@ -37,9 +37,10 @@ async function serve(request){
  }catch{return new Response('Not found',{status:404});}
 }
 const {Planner}=require('./plan-r1.cjs');
-const planner=new Planner(app.isPackaged?path.join(process.resourcesPath,'fsd-runtime'):path.join(__dirname,'..',process.platform==='win32'?'fsd-runtime-win':'fsd-runtime'));
-ipcMain.handle('plan-r1-predict',(event,state)=>{if(!win||event.sender!==win.webContents||!event.senderFrame?.url.startsWith('roadster://app/'))throw Error('Untrusted planner request');return planner.predict(state);});
-app.on('before-quit',()=>planner.stop());
+const drivingOnly=process.platform==='win32'&&process.arch==='ia32';
+const planner=drivingOnly?null:new Planner(app.isPackaged?path.join(process.resourcesPath,'fsd-runtime'):path.join(__dirname,'..',process.platform==='win32'?'fsd-runtime-win':'fsd-runtime'));
+if(planner)ipcMain.handle('plan-r1-predict',(event,state)=>{if(!win||event.sender!==win.webContents||!event.senderFrame?.url.startsWith('roadster://app/'))throw Error('Untrusted planner request');return planner.predict(state);});
+app.on('before-quit',()=>planner?.stop());
 let win;
 let language='en';
 function nativeText(text) {
@@ -64,7 +65,7 @@ function createWindow(){
  win.webContents.setWindowOpenHandler(()=>({action:'deny'}));
  win.webContents.on('will-navigate',(e,url)=>{const target=new URL(url);if(target.protocol!=='roadster:'||target.hostname!=='app')e.preventDefault();});
  win.webContents.on('render-process-gone',(_e,details)=>{if(details.reason!=='clean-exit')dialog.showErrorBox(nativeText('场景停止运行'),nativeText('请关闭应用后重新打开。原因：')+details.reason);});
- win.loadURL(ORIGIN+'/'+(auditFile?'?native-audit=1&audit-mode='+encodeURIComponent(auditMode)+(auditMode==='garage-view'?'':'&fixed-render=1920x1080')+(auditMode==='profile-before'?'&render-baseline=1':''):''));
+ win.loadURL(ORIGIN+'/'+(auditFile?'?native-audit=1&audit-mode='+encodeURIComponent(auditMode)+(['garage-view','driving-edition'].includes(auditMode)?'':'&fixed-render=1920x1080')+(auditMode==='profile-before'?'&render-baseline=1':''):''));
  updateMenu();
 }
 if(!app.requestSingleInstanceLock())app.quit();else{

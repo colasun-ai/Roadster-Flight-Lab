@@ -11,6 +11,7 @@
     "desktop": "electron .",
     "pack:mac": "npm run build && node scripts/build-mac.mjs",
     "pack:win": "npm run build && electron-builder --config electron-builder.config.cjs --win --x64",
+    "pack:win32": "npm run build && electron-builder --config electron-builder.win32.cjs --win --ia32",
     "test:handling": "node tests/handling.test.js",
     "test:vehicles": "node tests/model3.test.js && node tests/modely.test.js && node tests/vehicle-lifecycle.test.js && node tests/input-safety.test.js && node tests/vehicle-visual.test.js && node tests/model-y-roll-stability.test.js && node tests/emergency-stabilization.test.js",
     "test:regression": "node scripts/roadster-trace-regression.mjs",
