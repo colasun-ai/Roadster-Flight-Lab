@@ -4,7 +4,9 @@
 
 **Prueba tres coches en un mismo circuito. Salta una rampa con los propulsores del Roadster, siente la suspensión del Model 3 en una curva peraltada y observa cómo el planificador local del Model Y elige su trayectoria por la ciudad.**
 
-[Descargar para Windows x64](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x64.exe) · [Descargar para Apple Silicon](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-arm64.zip) · [notas de versión y sumas de verificación](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.1)
+[Windows de 64 bits · Intel / AMD](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x64.exe) · [Mac · Apple Silicon](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-arm64.zip) · [Mac · Intel](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-x64.zip) · [Windows de 32 bits · Edición de conducción (sin FSD)](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x86-Driving.exe) · [notas de versión y sumas de verificación](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.1)
+
+Las tres versiones de 64 bits incluyen FSD local. El EXE x64 también superó las pruebas del garaje, la ciudad y la inferencia local por emulación en Windows 11 para Arm. La edición de 32 bits incluye los tres coches, la pista y los propulsores del Roadster. Se probó como proceso de 32 bits en Windows de 64 bits.
 
 ## El simulador en movimiento
 
@@ -55,7 +57,7 @@ Elige un destino en el mapa y activa FSD. La red de 61,43 km incluye autopistas,
 
 En Windows 11 con una CPU Intel o AMD, haga doble clic en el EXE portátil. Deje aproximadamente 3 GB de espacio temporal para la extracción. El ejecutable no está firmado, por lo que Windows puede mostrar un mensaje de editor desconocido.
 
-en una Apple Silicon Mac, descomprime el ZIP y abre la aplicación. Tiene una firma ad-hoc y no ha sido certificada ante notario por Apple. Ambos paquetes de escritorio incluyen vehículos, texturas, motor de física y planificador de CPU.
+En Mac, descomprime el ZIP correspondiente a tu procesador y abre la aplicación. Ambas ediciones para Mac llevan firma ad hoc y no están certificadas por Apple.
 
 ## Lo que se ha medido
 
@@ -86,6 +88,10 @@ Apple Silicon: instale las herramientas de línea de comandos de Xcode y uv ante
 python3 scripts/fsd/bootstrap.py
 npm run pack:mac
 ```
+
+**Intel Mac (x64)** · `python3 scripts/fsd/prepare_mac_intel_runtime.py` → `npm run pack:mac`
+
+**Windows x86** · `npm run pack:win32`
 
 ### ejecutar las suites de regresión
 

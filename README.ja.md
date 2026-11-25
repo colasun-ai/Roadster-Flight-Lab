@@ -4,7 +4,9 @@
 
 **ひとつの試験場で3台の違いを体感できます。Roadster でジェットを使ってジャンプし、Model 3 でバンク走行時の足回りを確かめ、Model Y ではローカルの経路予測モデルに街を走らせてみてください。**
 
-[Download for Windows x64](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x64.exe) · [Download for Apple Silicon](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-arm64.zip) · [Release notes and checksums](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.1)
+[Windows 64 ビット · Intel / AMD](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x64.exe) · [Mac · Apple シリコン](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-arm64.zip) · [Mac · Intel](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-x64.zip) · [Windows 32 ビット · 走行版 (FSD なし)](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x86-Driving.exe) · [リリース情報・チェックサム](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.1)
+
+64 ビットの各版にはローカル FSD が搭載されています。Windows 11 Arm 上でも x64 版のガレージ、市街地、モデル推論をエミュレーションで確認しました。32 ビット走行版には 3 車種、テストコース、Roadster のジェット推進を収録。64 ビット Windows 上の 32 ビットプロセスで実走テスト済みです。
 
 ## シミュレーターの走行映像
 
@@ -55,7 +57,7 @@
 
 Intel または AMD CPU を搭載した Windows 11 では、ポータブル EXE をダブルクリックします。抽出用に約 3 GB の一時スペースを確保してください。実行可能ファイルは署名されていないため、Windows では発行元不明のプロンプトが表示される場合があります。
 
-Apple Silicon Mac では、ZIP を解凍してアプリを開きます。これにはアドホック署名があり、Apple によって公証されていません。どちらのデスクトップ パッケージにも、車両、テクスチャ、物理エンジン、CPU プランナーが含まれています。
+Mac ではチップに合う ZIP を展開してアプリを開きます。両方の Mac 版にアドホック署名があり、Apple の公証は受けていません。
 
 ## 測定されたもの
 
@@ -86,6 +88,10 @@ Apple Silicon: ランタイムを準備して署名付きアプリをビルド�
 python3 scripts/fsd/bootstrap.py
 npm run pack:mac
 ```
+
+**Intel Mac (x64)** · `python3 scripts/fsd/prepare_mac_intel_runtime.py` → `npm run pack:mac`
+
+**Windows x86** · `npm run pack:win32`
 
 ### 回帰スイートを実行する
 

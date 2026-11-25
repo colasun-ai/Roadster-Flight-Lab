@@ -4,7 +4,9 @@
 
 **Three cars, one proving ground. Launch a jet-assisted Roadster, feel a Model 3 load up its suspension on a banked bend, or let a local trajectory model navigate the city in a Model Y.**
 
-[Download for Windows x64](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x64.exe) · [Download for Apple Silicon](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-arm64.zip) · [Release notes and checksums](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.1)
+[Windows 64-bit · Intel / AMD](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x64.exe) · [Mac · Apple Silicon](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-arm64.zip) · [Mac · Intel](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-x64.zip) · [Windows 32-bit · Driving Edition (no FSD)](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x86-Driving.exe) · [Release notes and checksums](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.1)
+
+The three 64-bit builds include local FSD. The Windows x64 EXE also passed garage, city and planner checks under Windows 11 on Arm using emulation. The 32-bit edition includes all three cars, the proving ground and Roadster jets. It was tested as a 32-bit process on 64-bit Windows.
 
 ## Watch the simulator in motion
 
@@ -55,7 +57,7 @@ Pick a destination on the map and engage FSD. The 61.43 km road network includes
 
 On Windows 11 with an Intel or AMD CPU, double-click the portable EXE. Allow about 3 GB of temporary space for extraction. The executable is unsigned, so Windows may show an unknown-publisher prompt.
 
-On an Apple Silicon Mac, unpack the ZIP and open the app. It has an ad-hoc signature and has not been notarized by Apple. Both desktop packages include the vehicles, textures, physics engine and CPU planner.
+On a Mac, unpack the ZIP for your processor and open the app. Both Mac builds are ad-hoc signed and have not been notarized by Apple.
 
 ## What has been measured
 
@@ -86,6 +88,10 @@ Apple Silicon: install the Xcode command-line tools and uv before preparing the 
 python3 scripts/fsd/bootstrap.py
 npm run pack:mac
 ```
+
+**Intel Mac (x64)** · `python3 scripts/fsd/prepare_mac_intel_runtime.py` → `npm run pack:mac`
+
+**Windows x86** · `npm run pack:win32`
 
 ### Run the regression suites
 

@@ -1,0 +1,48 @@
+{
+  "version": "0.10.1",
+  "intelMac": {
+    "file": "Roadster-Flight-Lab-0.10.1-Mac-x64.zip",
+    "sha256": "11ec507d571d28c916731df447bd943b571beee74306b157583b19a28beed9f7",
+    "bytes": 501720526,
+    "buildCommit": "28f2fcf7d76aae2b5419680e406040bc67799b56",
+    "intelCpuBuildAndInference": "https://github.com/colasun-ai/Roadster-Flight-Lab/actions/runs/45603653535/job/139168770665",
+    "checkpoint": "official-plan-r1-fine-tuning",
+    "predictedPoses": 16,
+    "sampleInferenceMs": 447.934,
+    "localGui": {
+      "host": "Apple M4 running the distributed x86_64 application through Rosetta",
+      "codesign": "ad hoc, verified with --deep --strict",
+      "macosNotarization": false,
+      "testOutput": "Passed 9 garage and city checks"
+    },
+    "limits": "No physical Intel GPU measurement. The hosted Intel macOS machine could not create a WebGL context. The first hosted Rosetta garage run exceeded its cold Model 3 load time budget."
+  },
+  "windows32Driving": {
+    "file": "Roadster-Flight-Lab-0.10.1-Windows-x86-Driving.exe",
+    "sha256": "0659d493ee80736079785cfc70ab41e42830bfebbc1b2116dd42658ca4d55277",
+    "bytes": 139067439,
+    "buildCommit": "1b485b81a7f1cd364dd1e3d982e5a817c3cc3aee",
+    "test": "https://github.com/colasun-ai/Roadster-Flight-Lab/actions/runs/45600408550",
+    "host": "Windows Server 2022 x64, WOW64",
+    "processArch": "ia32",
+    "peMachine": "0x014C",
+    "localFsd": false,
+    "city": false,
+    "driving": [
+      "roadster",
+      "model3-performance-2018",
+      "model-y-performance-2026"
+    ],
+    "slope": "D5",
+    "roadsterJetNewtons": 33039.87687130652,
+    "physical32BitOsTest": false
+  },
+  "windows11Arm": {
+    "file": "Roadster-Flight-Lab-0.10.1-Windows-x64.exe",
+    "execution": "x64 emulation",
+    "test": "https://github.com/colasun-ai/Roadster-Flight-Lab/actions/runs/45598371631",
+    "predictedPoses": 16,
+    "sampleInferenceMs": 1734.0742,
+    "garageAndCityPassed": true
+  }
+}

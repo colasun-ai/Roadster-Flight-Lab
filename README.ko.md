@@ -4,7 +4,9 @@
 
 **하나의 시험장에서 세 대를 비교해 보세요. Roadster로 제트 점프를 하고, Model 3로 경사진 코너에서 서스펜션 반응을 느껴 보세요. Model Y에서는 내장 주행 모델이 도심에서 어떤 경로를 고르는지 볼 수 있습니다.**
 
-[Windows x64용 다운로드](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x64.exe) · [Apple Silicon용 다운로드](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-arm64.zip) · [릴리스 노트 및 체크섬](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.1)
+[Windows 64비트 · Intel / AMD](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x64.exe) · [Mac · Apple Silicon](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-arm64.zip) · [Mac · Intel](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-x64.zip) · [Windows 32비트 · 주행판 (FSD 미포함)](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x86-Driving.exe) · [릴리스 노트 및 체크섬](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.1)
+
+64비트 버전 3종은 모두 로컬 FSD를 지원합니다. Windows 11 ARM에서도 에뮬레이션으로 x64 버전의 차고, 도심 및 모델 추론을 검증했습니다. 32비트 주행판은 세 차량과 시험 주행장, Roadster 제트 추진을 제공하며 64비트 Windows에서 32비트 프로세스로 시험했습니다.
 
 ## 시뮬레이터 주행 영상
 
@@ -55,7 +57,7 @@ Tesla Garage에서 Roadster를 선택하고 Start Driving을 선택한 다음 �
 
 Intel 또는 AMD CPU가 탑재된 Windows 11에서는 휴대용 EXE를 두 번 클릭합니다. 추출을 위해 약 3GB의 임시 공간을 허용합니다. 실행 파일이 서명되지 않았으므로 Windows에서 알 수 없는 게시자 프롬프트가 표시될 수 있습니다.
 
-Apple Silicon Mac에서 ZIP 압축을 풀고 앱을 엽니다. 임시 서명이 있으며 Apple에서 공증을 받지 않았습니다. 두 데스크탑 패키지 모두 차량, 텍스처, 물리 엔진 및 CPU 플래너를 포함합니다.
+Mac에서는 칩에 맞는 ZIP의 압축을 풀고 앱을 엽니다. 두 Mac 버전은 임시 서명되었으며 Apple 공증을 받지 않았습니다.
 
 ## 측정된 내용
 
@@ -86,6 +88,10 @@ Apple Silicon: 런타임을 준비하고 서명된 앱을 구축하기 전에 Xc
 python3 scripts/fsd/bootstrap.py
 npm run pack:mac
 ```
+
+**Intel Mac (x64)** · `python3 scripts/fsd/prepare_mac_intel_runtime.py` → `npm run pack:mac`
+
+**Windows x86** · `npm run pack:win32`
 
 ### 회귀 스위트 실행
 

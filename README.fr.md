@@ -4,7 +4,9 @@
 
 **Trois voitures sur un même terrain d’essai. Franchissez un tremplin avec les propulseurs du Roadster, testez la suspension de la Model 3 en virage relevé, puis observez comment le planificateur embarqué du Model Y choisit sa trajectoire en ville.**
 
-[Télécharger pour Windows x64](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x64.exe) · [Télécharger pour Apple Silicon](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-arm64.zip) · [notes de version et sommes de contrôle](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.1)
+[Windows 64 bits · Intel / AMD](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x64.exe) · [Mac · Apple Silicon](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-arm64.zip) · [Mac · Intel](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-x64.zip) · [Windows 32 bits · Édition conduite (sans FSD)](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x86-Driving.exe) · [notes de version et sommes de contrôle](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.1)
+
+Les trois éditions 64 bits intègrent le FSD local. Sous Windows 11 sur Arm, l’EXE x64 a aussi passé les tests du garage, de la ville et du modèle local en émulation. L’édition conduite 32 bits comprend les trois voitures, la piste et les propulseurs du Roadster. Elle a été testée en tant que processus 32 bits sous Windows 64 bits.
 
 ## Vidéos du simulateur
 
@@ -55,7 +57,7 @@ Choisissez une destination sur la carte et activez FSD. Le réseau de 61,43 km c
 
 Sous Windows 11 avec un processeur Intel ou AMD, double-cliquez sur le fichier EXE portable. Prévoyez environ 3 Go d’espace temporaire pour l’extraction. L'exécutable n'est pas signé, Windows peut donc afficher une invite d'éditeur inconnu.
 
-Sur un Mac Apple Silicon, décompressez le ZIP et ouvrez l'application. Il porte une signature ad hoc et n'a pas été notarié par Apple. Les deux packages de bureau incluent les véhicules, les textures, le moteur physique et le planificateur de processeur.
+Sur Mac, décompressez le ZIP correspondant à votre processeur et ouvrez l’application. Les deux versions Mac portent une signature ad hoc et ne sont pas notariées par Apple.
 
 ## Ce qui a été mesuré
 
@@ -86,6 +88,10 @@ Apple Silicon : installez les outils de ligne de commande Xcode et uv avant de 
 python3 scripts/fsd/bootstrap.py
 npm run pack:mac
 ```
+
+**Intel Mac (x64)** · `python3 scripts/fsd/prepare_mac_intel_runtime.py` → `npm run pack:mac`
+
+**Windows x86** · `npm run pack:win32`
 
 ### Exécuter les suites de régression
 

@@ -4,7 +4,9 @@
 
 **Drei Fahrzeuge auf einem Testgelände. Springe mit dem düsenunterstützten Roadster über eine Rampe, teste das Fahrwerk des Model 3 in der Steilkurve oder beobachte im Model Y, wie der lokale Fahrplaner durch die Stadt navigiert.**
 
-[Download für Windows x64](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x64.exe) · [Download für Apple Silicon](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-arm64.zip) · [Versionshinweise und Prüfsummen](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.1)
+[Windows 64 Bit · Intel / AMD](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x64.exe) · [Mac · Apple Silicon](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-arm64.zip) · [Mac · Intel](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-x64.zip) · [Windows 32 Bit · Fahredition (ohne FSD)](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x86-Driving.exe) · [Versionshinweise und Prüfsummen](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.1)
+
+Alle drei 64-Bit-Pakete enthalten lokales FSD. Die x64-EXE bestand auch unter Windows 11 auf Arm per Emulation die Tests für Garage, Stadt und lokale Modellinferenz. Die 32-Bit-Fahredition enthält alle drei Autos, das Testgelände und den Kaltgasantrieb. Getestet wurde sie als 32-Bit-Prozess unter 64-Bit-Windows.
 
 ## Fahrszenen aus dem Simulator
 
@@ -55,7 +57,7 @@ Wähle ein Ziel auf der Karte und aktiviere FSD. Das 61,43 km lange Straßennetz
 
 Doppelklicken Sie unter Windows 11 mit einer Intel- oder AMD-CPU auf die portable EXE-Datei. Planen Sie etwa 3 GB temporären Speicherplatz für die Extraktion ein. Die ausführbare Datei ist nicht signiert, daher zeigt Windows möglicherweise eine Eingabeaufforderung zum unbekannten Herausgeber an.
 
-Entpacken Sie auf einem Apple Silicon Mac die ZIP-Datei und öffnen Sie die App. Es verfügt über eine Ad-hoc-Signatur und wurde nicht von Apple notariell beglaubigt. Beide Desktop-Pakete enthalten die Fahrzeuge, Texturen, die Physik-Engine und den CPU-Planer.
+Auf dem Mac die ZIP-Datei für den eigenen Prozessor entpacken und die App öffnen. Beide Mac-Pakete sind ad hoc signiert und wurden von Apple nicht notarisiert.
 
 ## Was wurde gemessen
 
@@ -86,6 +88,10 @@ Apple Silicon: Installieren Sie die Xcode-Befehlszeilentools und UV, bevor Sie d
 python3 scripts/fsd/bootstrap.py
 npm run pack:mac
 ```
+
+**Intel Mac (x64)** · `python3 scripts/fsd/prepare_mac_intel_runtime.py` → `npm run pack:mac`
+
+**Windows x86** · `npm run pack:win32`
 
 ### Führen Sie die Regressionssuiten aus
 

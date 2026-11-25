@@ -4,7 +4,9 @@
 
 **在同一個離線駕駛模擬器裡，把 Roadster 送上飛坡，給 Model 3 做坡起測試，或者坐進 Model Y，觀察本地模型怎樣在城市裡選擇車道。**
 
-[下載 Windows x64 便攜版](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x64.exe) · [下載 Apple Silicon Mac 版](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-arm64.zip) · [所有釋出檔案與校驗值](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.1)
+[Windows 64 位元 · Intel / AMD](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x64.exe) · [Mac · Apple 晶片](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-arm64.zip) · [Mac · Intel 晶片](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-x64.zip) · [Windows 32 位元 · 駕駛版 (無 FSD)](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x86-Driving.exe) · [所有釋出檔案與校驗值](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.1)
+
+三個 64 位元版本均含本機 FSD。Windows x64 版也在 Windows 11 ARM 測試機上通過車庫、城市與模型推論測試。32 位元駕駛版提供三輛車、試車場與 Roadster 噴氣推進，已在 64 位元 Windows 上以 32 位元程序實測。
 
 ## 模擬器實錄
 
@@ -19,7 +21,7 @@
 
 ## 第一次上車
 
-**Windows 11 Intel / AMD** 下載上面的 EXE，雙擊開啟。便攜啟動器會先把遊戲和本地推理環境解壓到臨時目錄，請預留約 3 GB 空間。Windows 版未做 Authenticode 簽名，SmartScreen 可能提示釋出者未知。**Apple Silicon Mac** 下載 ZIP，解壓後開啟 App。Mac 版採用 Ad-hoc 簽名，未經 Apple 公證。兩個桌面包都自帶車輛、貼圖、物理引擎與模型，遊戲時可斷網。
+**Windows 11 Intel / AMD** 下載上面的 EXE，雙擊開啟。便攜啟動器會先把遊戲和本地推理環境解壓到臨時目錄，請預留約 3 GB 空間。Windows 版未做 Authenticode 簽名，SmartScreen 可能提示釋出者未知。**Mac** 請選擇與晶片相符的 ZIP，解壓縮後開啟 App。兩種 Mac 版本皆採用 Ad-hoc 簽署，未經 Apple 公證。
 
 | 想試什麼 | 從車庫出發 |
 | --- | --- |
@@ -76,6 +78,8 @@ npm run dev
 | --- | --- |
 | Windows x64 | 安裝 Python 3.10+，執行 `python scripts/fsd/prepare_windows_runtime.py`。指令碼校驗 33 個固定下載檔案並組裝獨立執行環境。執行 `node scripts/fsd/smoke_portable.cjs` 可驗證一次真實推理，再執行 `npm run pack:win`。 |
 | macOS Apple Silicon | 準備 Xcode 命令列工具、Python 與 uv，執行 `python3 scripts/fsd/bootstrap.py`，再執行 `npm run pack:mac`。簽名及驗證由打包指令碼完成。 |
+| macOS Intel (x64) | `python3 scripts/fsd/prepare_mac_intel_runtime.py` → `npm run pack:mac` |
+| Windows x86 | `npm run pack:win32` |
 
 產物位於 `desktop-build/`。開發桌面入口為 `npm run build` 後執行 `npm run desktop`。Windows 驗證流程可從原始碼構建，也可下載一個指定 Release 的 EXE，直接對其內建模型、車庫、車輛切換和城市進出做檢查。[Windows 驗證流程](.github/workflows/windows.yml)
 
