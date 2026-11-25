@@ -10,8 +10,8 @@
 
 | FSD 도심 주행 · Roadster, Model 3, Model Y | D5 점프대 · 제트 추진으로 도약하는 Roadster |
 | --- | --- |
-| [![FSD 도심 주행 · Roadster, Model 3, Model Y](docs/media/fsd-city.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/fsd-city.mp4) | [![D5 점프대 · 제트 추진으로 도약하는 Roadster](docs/media/d5-jump.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/d5-jump.mp4) |
-| [▶ 전체 영상 재생 · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/fsd-city.mp4) | [▶ 전체 영상 재생 · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/d5-jump.mp4) |
+| [![FSD 도심 주행 · Roadster, Model 3, Model Y](docs/media/ko/fsd-city.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/ko/fsd-city.mp4) | [![D5 점프대 · 제트 추진으로 도약하는 Roadster](docs/media/ko/d5-jump.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/ko/d5-jump.mp4) |
+| [▶ 전체 영상 재생 · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/ko/fsd-city.mp4) | [▶ 전체 영상 재생 · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/ko/d5-jump.mp4) |
 
 ![2018년 모델 3 퍼포먼스가 전시된 Tesla Garage](docs/images/garage.jpg)
 

@@ -10,8 +10,8 @@
 
 | FSD 城市 · Roadster、Model 3、Model Y 三車同框 | D5 飛坡 · Roadster 冷氣推進飛躍 |
 | --- | --- |
-| [![FSD 城市 · Roadster、Model 3、Model Y 三車同框](docs/media/fsd-city.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/fsd-city.mp4) | [![D5 飛坡 · Roadster 冷氣推進飛躍](docs/media/d5-jump.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/d5-jump.mp4) |
-| [▶ 播放完整影片 · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/fsd-city.mp4) | [▶ 播放完整影片 · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/d5-jump.mp4) |
+| [![FSD 城市 · Roadster、Model 3、Model Y 三車同框](docs/media/zh-TW/fsd-city.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/zh-TW/fsd-city.mp4) | [![D5 飛坡 · Roadster 冷氣推進飛躍](docs/media/zh-TW/d5-jump.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/zh-TW/d5-jump.mp4) |
+| [▶ 播放完整影片 · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/zh-TW/fsd-city.mp4) | [▶ 播放完整影片 · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/zh-TW/d5-jump.mp4) |
 
 ![Tesla Garage 中可環繞檢視的 Model 3 Performance](docs/images/garage.jpg)
 

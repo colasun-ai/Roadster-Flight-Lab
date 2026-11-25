@@ -10,8 +10,8 @@
 
 | FSD 市街地走行 · Roadster、Model 3、Model Y | D5 ジャンプ台 · Roadster のジェットアシスト |
 | --- | --- |
-| [![FSD 市街地走行 · Roadster、Model 3、Model Y](docs/media/fsd-city.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/fsd-city.mp4) | [![D5 ジャンプ台 · Roadster のジェットアシスト](docs/media/d5-jump.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/d5-jump.mp4) |
-| [▶ 動画を再生 · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/fsd-city.mp4) | [▶ 動画を再生 · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/d5-jump.mp4) |
+| [![FSD 市街地走行 · Roadster、Model 3、Model Y](docs/media/ja/fsd-city.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/ja/fsd-city.mp4) | [![D5 ジャンプ台 · Roadster のジェットアシスト](docs/media/ja/d5-jump.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/ja/d5-jump.mp4) |
+| [▶ 動画を再生 · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/ja/fsd-city.mp4) | [▶ 動画を再生 · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/ja/d5-jump.mp4) |
 
 ![2018 モデル 3 パフォーマンスが展示されているテスラ ガレージ](docs/images/garage.jpg)
 

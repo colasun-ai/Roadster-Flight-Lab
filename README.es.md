@@ -10,8 +10,8 @@
 
 | FSD en la ciudad · Roadster, Model 3 y Model Y | Rampa D5 · Salto del Roadster con propulsión de gas frío |
 | --- | --- |
-| [![FSD en la ciudad · Roadster, Model 3 y Model Y](docs/media/fsd-city.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/fsd-city.mp4) | [![Rampa D5 · Salto del Roadster con propulsión de gas frío](docs/media/d5-jump.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/d5-jump.mp4) |
-| [▶ Ver el vídeo completo · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/fsd-city.mp4) | [▶ Ver el vídeo completo · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/d5-jump.mp4) |
+| [![FSD en la ciudad · Roadster, Model 3 y Model Y](docs/media/es/fsd-city.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/es/fsd-city.mp4) | [![Rampa D5 · Salto del Roadster con propulsión de gas frío](docs/media/es/d5-jump.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/es/d5-jump.mp4) |
+| [▶ Ver el vídeo completo · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/es/fsd-city.mp4) | [▶ Ver el vídeo completo · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/es/d5-jump.mp4) |
 
 ![Tesla Garage con el Model 3 Performance 2018 en exhibición](docs/images/garage.jpg)
 
