@@ -53,7 +53,11 @@ jobs:
           codesign --verify --deep --strict "$app"
           node scripts/fsd/smoke_portable.cjs "$app/Contents/Resources/fsd-runtime"
           unzip -tq "desktop-build/"*"-Mac-$ROADSTER_MAC_ARCH.zip"
-          python3 scripts/verify-mac-garage.py "$app"
+          if [[ "$ROADSTER_MAC_ARCH" == "x64" ]]; then
+            python3 scripts/verify-mac-garage.py "$app" --software-rendering
+          else
+            python3 scripts/verify-mac-garage.py "$app"
+          fi
       - uses: actions/upload-artifact@v4
         with:
           name: mac-${{ inputs.arch || 'arm64' }}-archive

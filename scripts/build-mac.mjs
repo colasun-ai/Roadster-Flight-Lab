@@ -26,7 +26,7 @@ verifySlice(path.join(runtime, 'site-packages/torch/lib/libtorch_cpu.dylib'));
 const scratch = fs.mkdtempSync(path.join(os.tmpdir(), 'roadster-build-'));
 const temporary = path.join(scratch, 'output.noindex');
 const args = [path.join(root, 'node_modules/electron-builder/cli.js'), '--config',
-  'electron-builder.config.cjs', '--mac', '--' + arch, '-c.directories.output=' + temporary];
+  'electron-builder.config.cjs', '--mac', 'dir', '--' + arch, '-c.directories.output=' + temporary];
 if (process.env.ROADSTER_ELECTRON_DIST) args.push('-c.electronDist=' + process.env.ROADSTER_ELECTRON_DIST);
 execFileSync(process.execPath, args, {
   cwd: root, stdio: 'inherit', env: {...process.env, ROADSTER_MAC_ARCH: arch}

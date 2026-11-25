@@ -11,9 +11,12 @@ with tempfile.TemporaryDirectory(prefix="roadster-garage-") as folder:
     log = Path(folder) / "events.jsonl"
     command = [str(app / "Contents/MacOS/Roadster Flight Lab"),
                "--audit-mode=garage-view", f"--audit-output={log}"]
+    software = "--software-rendering" in sys.argv[2:]
+    if software:
+        command.extend(["--use-gl=angle", "--use-angle=swiftshader", "--enable-unsafe-swiftshader"])
     process = subprocess.Popen(command)
     try:
-        deadline = time.monotonic() + 180
+        deadline = time.monotonic() + (360 if software else 180)
         while time.monotonic() < deadline:
             if process.poll() is not None:
                 sys.exit(f"Application exited with code {process.returncode}")
@@ -29,6 +32,9 @@ with tempfile.TemporaryDirectory(prefix="roadster-garage-") as folder:
                         print(f"Passed {len(event['checkpoints'])} garage and city checks")
                         sys.exit(0)
             time.sleep(1)
+        if log.exists():
+            for line in log.read_text().splitlines()[-8:]:
+                print(line[:1200], file=sys.stderr)
         sys.exit("Timed out waiting for the garage and city checks")
     finally:
         if process.poll() is None:
