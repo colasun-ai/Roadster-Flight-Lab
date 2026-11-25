@@ -6,6 +6,13 @@
 
 [Download for Windows x64](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x64.exe) · [Download for Apple Silicon](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-arm64.zip) · [Release notes and checksums](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.1)
 
+## シミュレーターの走行映像
+
+| FSD 市街地走行 · Roadster、Model 3、Model Y | D5 ジャンプ台 · Roadster のジェットアシスト |
+| --- | --- |
+| [![FSD 市街地走行 · Roadster、Model 3、Model Y](docs/media/fsd-city.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/fsd-city.mp4) | [![D5 ジャンプ台 · Roadster のジェットアシスト](docs/media/d5-jump.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/d5-jump.mp4) |
+| [▶ 動画を再生 · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/fsd-city.mp4) | [▶ 動画を再生 · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/d5-jump.mp4) |
+
 ![2018 モデル 3 パフォーマンスが展示されているテスラ ガレージ](docs/images/garage.jpg)
 
 ## 初めてのドライブ

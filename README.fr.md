@@ -6,6 +6,13 @@
 
 [Télécharger pour Windows x64](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x64.exe) · [Télécharger pour Apple Silicon](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-arm64.zip) · [notes de version et sommes de contrôle](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.1)
 
+## Vidéos du simulateur
+
+| FSD en ville · Roadster, Model 3 et Model Y | Tremplin D5 · Le Roadster décolle avec ses propulseurs à gaz froid |
+| --- | --- |
+| [![FSD en ville · Roadster, Model 3 et Model Y](docs/media/fsd-city.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/fsd-city.mp4) | [![Tremplin D5 · Le Roadster décolle avec ses propulseurs à gaz froid](docs/media/d5-jump.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/d5-jump.mp4) |
+| [▶ Voir la vidéo · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/fsd-city.mp4) | [▶ Voir la vidéo · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/d5-jump.mp4) |
+
 ![Tesla Garage avec la Model 3 Performance 2018 exposée](docs/images/garage.jpg)
 
 ## Votre premier trajet

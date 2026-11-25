@@ -6,6 +6,13 @@
 
 [下載 Windows x64 便攜版](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x64.exe) · [下載 Apple Silicon Mac 版](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-arm64.zip) · [所有釋出檔案與校驗值](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.1)
 
+## 模擬器實錄
+
+| FSD 城市 · Roadster、Model 3、Model Y 三車同框 | D5 飛坡 · Roadster 冷氣推進飛躍 |
+| --- | --- |
+| [![FSD 城市 · Roadster、Model 3、Model Y 三車同框](docs/media/fsd-city.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/fsd-city.mp4) | [![D5 飛坡 · Roadster 冷氣推進飛躍](docs/media/d5-jump.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/d5-jump.mp4) |
+| [▶ 播放完整影片 · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/fsd-city.mp4) | [▶ 播放完整影片 · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/d5-jump.mp4) |
+
 ![Tesla Garage 中可環繞檢視的 Model 3 Performance](docs/images/garage.jpg)
 
 **介面語言**　首次啟動使用英語。在 Tesla Garage 左側的 Language 下拉式選單中選擇繁體中文，應用會重新開啟車庫並記住選擇。8 種語言均可離線使用，中文提供簡體和繁體。

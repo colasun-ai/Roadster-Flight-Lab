@@ -6,6 +6,13 @@
 
 [Windows x64용 다운로드](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Windows-x64.exe) · [Apple Silicon용 다운로드](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/download/v0.10.1/Roadster-Flight-Lab-0.10.1-Mac-arm64.zip) · [릴리스 노트 및 체크섬](https://github.com/colasun-ai/Roadster-Flight-Lab/releases/tag/v0.10.1)
 
+## 시뮬레이터 주행 영상
+
+| FSD 도심 주행 · Roadster, Model 3, Model Y | D5 점프대 · 제트 추진으로 도약하는 Roadster |
+| --- | --- |
+| [![FSD 도심 주행 · Roadster, Model 3, Model Y](docs/media/fsd-city.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/fsd-city.mp4) | [![D5 점프대 · 제트 추진으로 도약하는 Roadster](docs/media/d5-jump.gif)](https://colasun-ai.github.io/Roadster-Flight-Lab/media/d5-jump.mp4) |
+| [▶ 전체 영상 재생 · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/fsd-city.mp4) | [▶ 전체 영상 재생 · 0:20](https://colasun-ai.github.io/Roadster-Flight-Lab/media/d5-jump.mp4) |
+
 ![2018년 모델 3 퍼포먼스가 전시된 Tesla Garage](docs/images/garage.jpg)
 
 ## 첫 번째 드라이브
