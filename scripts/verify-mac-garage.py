@@ -11,12 +11,9 @@ with tempfile.TemporaryDirectory(prefix="roadster-garage-") as folder:
     log = Path(folder) / "events.jsonl"
     command = [str(app / "Contents/MacOS/Roadster Flight Lab"),
                "--audit-mode=garage-view", f"--audit-output={log}"]
-    software = "--software-rendering" in sys.argv[2:]
-    if software:
-        command.extend(["--use-gl=angle", "--use-angle=swiftshader", "--enable-unsafe-swiftshader"])
     process = subprocess.Popen(command)
     try:
-        deadline = time.monotonic() + (360 if software else 180)
+        deadline = time.monotonic() + 240
         while time.monotonic() < deadline:
             if process.poll() is not None:
                 sys.exit(f"Application exited with code {process.returncode}")
@@ -26,6 +23,8 @@ with tempfile.TemporaryDirectory(prefix="roadster-garage-") as folder:
                         event = json.loads(line).get("sample", {})
                     except json.JSONDecodeError:
                         continue  # The application may still be writing this line.
+                    if "Error creating WebGL context" in line:
+                        sys.exit("The test host could not create a WebGL context")
                     if event.get("event") == "garage-view-complete":
                         if not event.get("passed"):
                             sys.exit(f"Garage verification failed: {event}")

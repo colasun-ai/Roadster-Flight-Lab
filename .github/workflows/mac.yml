@@ -53,9 +53,10 @@ jobs:
           codesign --verify --deep --strict "$app"
           node scripts/fsd/smoke_portable.cjs "$app/Contents/Resources/fsd-runtime"
           unzip -tq "desktop-build/"*"-Mac-$ROADSTER_MAC_ARCH.zip"
-          if [[ "$ROADSTER_MAC_ARCH" == "x64" ]]; then
-            python3 scripts/verify-mac-garage.py "$app" --software-rendering
-          else
+          archive=$(node -p "require('./desktop-build/mac-build-path.json').archive")
+          shasum -a 256 "$archive"
+          stat -f 'Zip bytes: %z' "$archive"
+          if [[ "$ROADSTER_MAC_ARCH" == "arm64" ]]; then
             python3 scripts/verify-mac-garage.py "$app"
           fi
       - uses: actions/upload-artifact@v4
@@ -64,9 +65,29 @@ jobs:
           path: desktop-build/*-Mac-${{ inputs.arch || 'arm64' }}.zip
           compression-level: 0
           retention-days: 14
-  stage:
-    if: success() && inputs.stage_release && startsWith(github.ref, 'refs/tags/')
+  intel_window:
+    if: inputs.arch == 'x64'
     needs: verify
+    runs-on: macos-15
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: mac-x64-archive
+          path: installer
+      - name: Open the signed Intel ZIP under Rosetta and exercise the garage and city
+        run: |
+          test "$(uname -m)" = arm64
+          test "$(arch -x86_64 uname -m)" = x86_64
+          ditto -x -k installer/*-Mac-x64.zip "$RUNNER_TEMP/game"
+          app="$RUNNER_TEMP/game/Roadster Flight Lab.app"
+          test "$(lipo -archs "$app/Contents/MacOS/Roadster Flight Lab")" = x86_64
+          codesign --verify --deep --strict "$app"
+          python3 scripts/verify-mac-garage.py "$app"
+  stage:
+    if: always() && needs.verify.result == 'success' && (inputs.arch != 'x64' || needs.intel_window.result == 'success') && inputs.stage_release && startsWith(github.ref, 'refs/tags/')
+    needs: [verify, intel_window]
     runs-on: ubuntu-latest
     permissions:
       contents: write
