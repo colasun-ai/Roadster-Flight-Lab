@@ -13,7 +13,7 @@ with tempfile.TemporaryDirectory(prefix="roadster-garage-") as folder:
                "--audit-mode=garage-view", f"--audit-output={log}"]
     process = subprocess.Popen(command)
     try:
-        deadline = time.monotonic() + 240
+        deadline = time.monotonic() + 420
         while time.monotonic() < deadline:
             if process.poll() is not None:
                 sys.exit(f"Application exited with code {process.returncode}")

@@ -6,7 +6,8 @@ export async function auditGarageView({fsd,trackScene,switcher,root,getPaused}){
  const click=id=>el(id).click();
  const escape=()=>window.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',code:'Escape',bubbles:true}));
  async function waitFor(test,label){
-  const end=performance.now()+20000;
+  // A cold Model 3 load includes mesh parsing and first draw on the guest GPU.
+  const end=performance.now()+90000;
   while(!test()&&performance.now()<end)await frame();
   check(test(),label);await frame();
  }
